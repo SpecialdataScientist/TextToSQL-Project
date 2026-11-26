@@ -1,0 +1,11 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+embedded_schema/
+embedded_schema_open_ai/
+embedded_triplet/
+embedded_triplet_open_ai/
+rdf_triplet/
+rdf_triplet_open_router/

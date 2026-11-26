@@ -1,0 +1,35 @@
+name: text-to-sql-db
+
+services:
+  db:
+    build: .
+    pull_policy: build
+    container_name: text_to_sql_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME:-text_to_sql}
+      POSTGRES_USER: ${DB_USER:-text_to_sql}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Copy .env.example to .env and set DB_PASSWORD}
+      PGDATA: /text_to_sql_db/data/postgres
+      DB_SCHEMA: ${DB_SCHEMA:-public}
+      SEED_ROWS: ${SEED_ROWS:-50}
+      SEED: ${SEED:-42}
+    ports:
+      - "${DB_HOST:-127.0.0.1}:31066:5432"
+    volumes:
+      - ./data/postgres:/text_to_sql_db/data/postgres
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - >-
+          test ! -e "$$PGDATA/.text_to_sql_seed_pending"
+          && pg_isready -h 127.0.0.1 -U "$$POSTGRES_USER" -d "$$POSTGRES_DB"
+      interval: 2s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
+
+networks:
+  default:
+    name: text-to-sql-network
+    external: true

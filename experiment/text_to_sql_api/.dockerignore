@@ -1,0 +1,27 @@
+# Include the project .env; exclude environment variants except the template.
+.env.*
+!.env.example
+
+# Persist indexes in mounted directories instead of image layers.
+embedded_schema/
+embedded_schema_open_ai/
+embedded_triplet/
+embedded_triplet_open_ai/
+rdf_triplet/
+rdf_triplet_open_ai/
+rdf_triplet_open_router/
+
+.git/
+.venv/
+venv/
+**/__pycache__/
+**/*.py[cod]
+.pytest_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Test-script outputs may be created in any working directory.
+**/*_raw_*.json
+**/*_response_*.json
+**/llm_based_generate_sql_*.sql

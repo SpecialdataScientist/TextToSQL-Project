@@ -1,0 +1,16 @@
+#!/bin/sh
+set -eu
+
+: "${PGDATA:?PGDATA must be set}"
+export DB_HOST=/var/run/postgresql
+export DB_PORT="${PGPORT:-5432}"
+export DB_USER="${POSTGRES_USER:-postgres}"
+export DB_NAME="${POSTGRES_DB:-$DB_USER}"
+export DB_PASSWORD="${PGPASSWORD:-${POSTGRES_PASSWORD:-}}"
+export PYTHONPATH="/opt/text-to-sql-db${PYTHONPATH:+:$PYTHONPATH}"
+
+python -m seed_db "$@"
+
+if [ "${1:-}" = seed ]; then
+    rm -f "$PGDATA/.text_to_sql_seed_pending"
+fi

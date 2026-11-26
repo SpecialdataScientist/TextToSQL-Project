@@ -1,0 +1,17 @@
+.venv/
+venv/
+**/__pycache__/
+**/*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.git/
+.agents/
+.codex/
+.aws/
+tests/
+requirements-dev.txt
+pytest.ini
+dockerfilke_ref
+README.md
+run_guide.md

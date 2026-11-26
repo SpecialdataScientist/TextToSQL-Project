@@ -1,0 +1,30 @@
+{
+  "data": {
+    "table_name": [
+      "HR_FACULTY_ROSTER",
+      "TIP_SUBJECT_OFFERED",
+      "STUDENT_DEPARTMENT"
+    ],
+    "schema": [
+      "-- HR_FACULTY_ROSTER\nCREATE TABLE HR_FACULTY_ROSTER (\n    MIT_ID VARCHAR2,\n    LAST_NAME VARCHAR2,\n    FIRST_NAME VARCHAR2,\n    MIDDLE_NAME VARCHAR2,\n    TERMINAL_DEGREE VARCHAR2,\n    APPOINTMENT_TYPE VARCHAR2,\n    JOB_TITLE VARCHAR2,\n    HR_ORG_UNIT_TITLE VARCHAR2,\n    POSITION_TITLE VARCHAR2,\n    ADMIN_ORG_UNIT_TITLE VARCHAR2,\n    ADMIN_POSITION_TITLE VARCHAR2,\n    ADMIN_JOB_TITLE VARCHAR2,\n    DIRECTORY_ORG_UNIT_TITLE VARCHAR2,\n    ENDOWED_CHAIR VARCHAR2,\n    EMERITUS_STATUS CHAR,\n    WAREHOUSE_LOAD_DATE DATE\n);",
+      "-- TIP_SUBJECT_OFFERED\nCREATE TABLE TIP_SUBJECT_OFFERED (\n    TIP_SUBJECT_OFFERED_KEY VARCHAR2,\n    TERM_CODE VARCHAR2,\n    IS_NO_COURSE_MATERIAL VARCHAR2,\n    MASTER_COURSE_NUMBER VARCHAR2,\n    MASTER_COURSE_NUMBER_SORT VARCHAR2,\n    MASTER_COURSE_NUMBER_DESC VARCHAR2,\n    MASTER_SUBJECT_ID VARCHAR2,\n    MASTER_SUBJECT_ID_SORT VARCHAR2,\n    COURSE_NUMBER VARCHAR2,\n    COURSE_NUMBER_SORT VARCHAR2,\n    COURSE_NUMBER_DESC VARCHAR2,\n    SUBJECT_ID VARCHAR2,\n    SUBJECT_ID_SORT VARCHAR2,\n    SUBJECT_TITLE VARCHAR2,\n    OFFER_DEPT_CODE VARCHAR2,\n    OFFER_DEPT_NAME VARCHAR2,\n    OFFER_SCHOOL_NAME VARCHAR2,\n    RESPONSIBLE_FACULTY_NAME VARCHAR2,\n    RESPONSIBLE_FACULTY_MIT_ID VARCHAR2,\n    NUM_ENROLLED_STUDENTS NUMBER,\n    WAREHOUSE_LOAD_DATE DATE\n);",
+      "-- STUDENT_DEPARTMENT\nCREATE TABLE STUDENT_DEPARTMENT (\n    DEPARTMENT_CODE VARCHAR2,\n    DEPARTMENT_NAME VARCHAR2,\n    DEPARTMENT_FULL_NAME VARCHAR2,\n    SCHOOL_CODE VARCHAR2,\n    SCHOOL_NAME VARCHAR2\n);"
+    ],
+    "description": [
+      "HR_FACULTY_ROSTER은 교수진의 인적 정보와 임용·직위·조직 정보를 조회하기 위한 테이블입니다. MIT_ID와 성·이름·중간명 컬럼을 통해 교수진의 식별 및 이름 정보를 조회할 수 있습니다. TERMINAL_DEGREE, APPOINTMENT_TYPE, JOB_TITLE 컬럼은 최종 학위, 임용 유형, 직위 정보를 확인하는 데 활용할 수 있습니다. HR_ORG_UNIT_TITLE, ADMIN_ORG_UNIT_TITLE, DIRECTORY_ORG_UNIT_TITLE과 ENDOWED_CHAIR, EMERITUS_STATUS 컬럼으로 소속 조직, 행정·디렉터리 조직, 석좌 및 명예직 상태를 조회할 수 있으며, WAREHOUSE_LOAD_DATE는 데이터 적재 시점을 확인하는 데 사용할 수 있습니다.",
+      "TIP_SUBJECT_OFFERED은 학기별 개설 교과목의 교과목 번호, 교과목명, 개설 학부·학교 및 담당 교수 정보를 조회하기 위한 테이블입니다. TERM_CODE는 개설 학기를 구분하고, COURSE_NUMBER와 SUBJECT_ID는 개설 교과목의 교과목 번호와 교과목 식별자를 나타내며 SUBJECT_TITLE은 교과목명을 제공합니다. OFFER_DEPT_CODE, OFFER_DEPT_NAME, OFFER_SCHOOL_NAME은 개설 학부와 학교 정보를, RESPONSIBLE_FACULTY_NAME과 RESPONSIBLE_FACULTY_MIT_ID는 담당 교수 정보를 조회하는 데 사용할 수 있습니다. NUM_ENROLLED_STUDENTS로 수강 인원을 확인할 수 있고, WAREHOUSE_LOAD_DATE는 데이터 적재 일자를 보여주므로 학기별 개설 교과목 현황과 수강 규모를 조회하는 데 활용할 수 있습니다.",
+      "STUDENT_DEPARTMENT은 학과 코드와 학과명, 학과 전체명, 학교 코드 및 학교명 정보를 조회하기 위한 테이블입니다. DEPARTMENT_CODE는 학과를 식별하는 코드이고, DEPARTMENT_NAME과 DEPARTMENT_FULL_NAME은 각각 학과의 명칭과 전체 명칭을 나타냅니다. SCHOOL_CODE와 SCHOOL_NAME을 통해 해당 학과가 속한 학교 정보를 함께 조회할 수 있습니다. 학과 코드나 학과명으로 학과를 검색하거나, 학교 코드 또는 학교명을 기준으로 학과 목록을 조회하는 데 활용할 수 있습니다."
+    ]
+  },
+  "meta_data": [
+    {
+      "embedding_model": "text-embedding-3-small",
+      "top_k": 3,
+      "retrieved_count": 3,
+      "unmapped_table_count": 0
+    }
+  ],
+  "status": "success",
+  "msg": "success",
+  "elapsed_time": 0.5242093480192125
+}

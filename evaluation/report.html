@@ -1,0 +1,1640 @@
+<!doctype html>
+<!-- Static snapshot of report.md; source SHA-256: fafc6d3ad04475fefc124a27c4cb31dc0eff5783f574fa7dc8bcecde20e0c88d -->
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="BEAVER dw 도메인의 테이블 97개와 질의 500건으로 비교한 테이블 스키마 검색 평가. 검색 기능 10종, 설정 18개의 품질·응답시간·반환량과 평가 방법을 함께 살펴봅니다.">
+  <title>테이블 스키마 검색 방법 평가 · BEAVER dw 평가 보고서</title>
+  <style>
+:root{color-scheme:light;--bg:#f4f6f5;--paper:#fff;--ink:#203531;--muted:#677973;--line:#e0e7e3;--green:#176c58;--tint:#edf5f0;--font:"Pretendard","Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",system-ui,-apple-system,sans-serif;--mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:0}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.9 var(--font);word-break:keep-all;overflow-wrap:anywhere}a{color:var(--green);text-underline-offset:3px}button,summary{font:inherit}button{cursor:pointer}[hidden]{display:none!important}a:focus-visible,button:focus-visible,summary:focus-visible,[tabindex="0"]:focus-visible{outline:3px solid #3a9178;outline-offset:4px;border-radius:4px}h2:focus,h3:focus{outline:none}::selection{background:#cde5d6;color:#163d2f}.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip-link{position:fixed;top:-90px;left:20px;z-index:100;background:#fff;padding:10px 18px;border:1px solid var(--line);border-radius:6px}.skip-link:focus{top:12px}
+.topbar{position:sticky;top:0;z-index:30;background:#fdfefdF5;border-bottom:1px solid var(--line);backdrop-filter:blur(12px)}.topbar-inner{max-width:1480px;min-height:66px;margin:auto;padding:0 40px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:13px;font-weight:750;color:var(--ink)}.brand-mark{display:grid;place-items:center;width:31px;height:31px;border-radius:8px;background:var(--ink);color:#e2f3e6}.brand-mark svg{width:20px;height:20px}.brand small{font-size:10px;color:#7b8c85;font-weight:500;letter-spacing:.12em;margin-left:6px}.header-actions{display:flex;align-items:center;gap:15px}.source-link{font-size:11px;color:var(--muted);text-decoration:none}.source-link:hover{color:var(--green)}.print-button{display:flex;align-items:center;gap:7px;padding:7px 12px;border:1px solid #d5dfd8;border-radius:6px;background:#fff;color:#425b51;font-size:11px}.print-button:hover{background:var(--tint);border-color:#9bb8a6}.print-button svg{width:14px;height:14px}.reading-progress{position:absolute;bottom:-1px;left:0;width:100%;height:2px;background:var(--green);transform:scaleX(0);transform-origin:left}
+.page{max-width:1480px;margin:auto;padding:0 40px}.hero{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:44px;padding:54px 0 31px;align-items:center}.eyebrow{font-size:10px;letter-spacing:.17em;font-weight:750;color:var(--green)}.hero h1{font-size:clamp(30px,3.5vw,47px);line-height:1.3;letter-spacing:-.055em;margin:16px 0 17px;font-weight:780}.hero-copy>p{color:var(--muted);font-size:14px;margin:0;line-height:1.95;max-width:650px}.hero-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:23px}.hero-tags span{font-size:10px;color:#667c70;border:1px solid #dce5dd;border-radius:4px;padding:2px 8px;background:#fafcf9}.best-card{position:relative;border:1px solid #264c3d;border-radius:14px;padding:27px 27px 22px;background:linear-gradient(125deg,#183d31,#203a35);color:#f3fbf4;overflow:hidden}.best-card:before{content:"";position:absolute;right:-38px;top:-46px;width:160px;height:160px;border:1px solid #93bca51c;border-radius:50%;pointer-events:none}.best-card .eyebrow{color:#afd2bb;font-size:9px}.best-value{font-size:65px;line-height:1.1;letter-spacing:-.07em;font-weight:700;margin:12px 0}.best-value span{font-size:28px;margin-left:4px;letter-spacing:-.03em;color:#bbd5c4}.best-card>p{font-size:12px;line-height:1.8;margin:0;color:#d0e1d6}.best-model{font-family:var(--mono);font-size:10px;color:#9eb8a9;margin-top:7px}.best-condition{display:inline-block;background:#ffffff0b;border:1px solid #819f8b45;border-radius:4px;color:#bedcc8;font-size:10px;margin-top:12px;padding:1px 8px}.best-detail{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:20px;padding-top:16px;border-top:1px solid #c7dfcd24}.best-detail span{display:block;font-size:8px;color:#a2beae}.best-detail strong{font-size:15px;font-weight:600;letter-spacing:-.02em}.best-detail strong small{font-size:9px;color:#afc5b7;margin-left:2px;font-weight:400}
+.overview-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-bottom:20px}.stat-card{position:relative;display:flex;align-items:center;gap:18px;background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:18px 22px}.stat-number{display:flex;align-items:baseline;gap:5px;flex-shrink:0}.stat-number strong{font-size:31px;font-weight:650;letter-spacing:-.04em;line-height:1.2}.stat-number span{font-size:12px;color:#76877d}.stat-text{border-left:1px solid var(--line);padding-left:18px;line-height:1.65}.stat-text b{display:block;font-size:12px;font-weight:650}.stat-text small{display:block;font-size:10px;color:var(--muted);margin-top:2px}.overview-note{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;border-left:3px solid #91ae9d;padding:8px 13px;margin:0 0 35px;font-size:11px;line-height:1.8;color:var(--muted)}.overview-note strong{font-size:11px;color:#496a57;font-weight:650}.overview-note a{white-space:nowrap;margin-left:auto;font-size:10px;text-decoration:none}
+.report-layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:30px;align-items:start}.sidebar{position:sticky;top:90px;max-height:calc(100dvh - 110px);overflow-y:auto;scrollbar-width:thin;padding:3px 4px 16px 0}.toc>summary{display:none}.toc-caption{font-size:9px;letter-spacing:.17em;color:#85978c;font-weight:750;padding:0 12px;margin:0 0 15px}.toc nav{display:flex;flex-direction:column;gap:4px}.toc-link,.toc-child{display:flex;align-items:center;gap:11px;text-decoration:none;color:#6a7c71;font-size:12px;padding:8px 10px;border-left:2px solid transparent;border-radius:0 5px 5px 0;line-height:1.65}.toc-link>span,.toc-child>span{font:10px/1.7 var(--mono);color:#91a296;flex-shrink:0}.toc-link:hover,.toc-child:hover{background:#eaf0e9;color:var(--green)}.toc-link[aria-current],.toc-child[aria-current]{background:#e4eee5;color:#285e40;border-left-color:#44865a;font-weight:700}.toc-link[aria-current]>span,.toc-child[aria-current]>span{color:#44865a}.toc-child{font-size:10px;padding:5px 8px 5px 30px;gap:9px}.toc-child>span{font-size:9px}.sidebar-note{margin:19px 12px 0;padding-top:15px;border-top:1px solid var(--line);font-size:10px;line-height:1.95;color:#8a988e}.sidebar-note strong{font-weight:600;color:#6c8373}
+.report{scroll-margin-top:96px;min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:13px;overflow:clip}.source-intro{padding:26px 34px 24px;background:#fafcf9;border-bottom:1px solid var(--line)}.intro-label{display:block;color:#5f7b65;font-size:9px;font-weight:750;letter-spacing:.17em;margin-bottom:12px}.report-section{padding:33px 34px 38px;border-bottom:1px solid var(--line);min-width:0}.report-section:last-child{border-bottom:0}.report h2{font-size:23px;line-height:1.6;letter-spacing:-.04em;font-weight:750;margin:0 0 23px;padding-bottom:17px;border-bottom:1px solid var(--line);scroll-margin-top:96px}.report h3{font-size:17px;line-height:1.7;letter-spacing:-.035em;margin:0 0 15px;font-weight:700;scroll-margin-top:96px}.subsection{margin-top:31px;padding-top:27px;border-top:1px solid #edf0eb;min-width:0}.report h2+.subsection{padding-top:0;border-top:0;margin-top:0}.report ul,.report ol{padding-left:21px;margin:12px 0 21px}.report li{margin:6px 0;padding-left:2px;font-size:13px;line-height:1.95;color:#4e6256}.report li::marker{color:#9aafa0}.report ol>li::marker{font-weight:650;color:#568568}.report strong{font-weight:700;color:#2e513a}.report :not(pre)>code{font:11.2px/1.8 var(--mono);color:#426a50;background:#f0f5ef;border:1px solid #e3ebe1;border-radius:4px;padding:1px 4px;word-break:break-word;overflow-wrap:anywhere}.source-intro ul{margin:0}.source-intro li{font-size:12px;margin:4px 0}.source-intro li:first-child{font-weight:600;color:#395d45}.table-wrap{max-width:100%;overflow-x:auto;margin:20px 0 23px;border:1px solid var(--line);border-radius:7px;scrollbar-width:thin;scrollbar-color:#b5c6b7 transparent}table{width:100%;min-width:540px;border-collapse:collapse;text-align:left;font-size:11.5px;line-height:1.85}th,td{padding:11px 13px;border-bottom:1px solid #e8ede6;vertical-align:top}thead th{background:#f3f7f0;font-size:10px;font-weight:650;color:#5b725d;white-space:nowrap;border-bottom:1px solid #dce5d7}tbody th{font-weight:600;color:#3f6046;text-align:left}tbody tr:last-child>th,tbody tr:last-child>td{border-bottom:0}tbody tr:hover{background:#f9fbf7}table code{font-size:10px!important}td[style*="right"]{font-variant-numeric:tabular-nums}.results-table{min-width:900px;font-size:11px;font-variant-numeric:tabular-nums}.results-table th,.results-table td{padding:11px 10px}.results-table td{white-space:nowrap}.ranking-table td:nth-child(2){white-space:normal;min-width:240px;width:30%;color:#3e5546}.results-table tbody th{width:44px;text-align:center;font-family:var(--mono);font-size:10px}.results-table thead th:first-child{text-align:center}.ranking-table td:nth-child(n+3){text-align:right}.recall-cell{font-weight:750;color:var(--green);background:#f5f9f2}.leading-row{background:#f0f6eb}.leading-row .recall-cell{background:#e7f1e1}.has-failures{background:#fffaf0}.numeric-table td{text-align:right}.numeric-table td:first-of-type{text-align:center}.results-table tr:target{background:#e7f3dc;outline:2px solid #5d8a41;outline-offset:-2px;scroll-margin-top:100px}.result-file{overflow-wrap:anywhere;word-break:break-word}.result-file>a{text-decoration:none}.result-file>a:hover{text-decoration:underline}.result-file code{font-size:11px!important}.subsection[aria-labelledby="section-5-1"],.subsection[aria-labelledby="section-5-2"]{border-left:3px solid #d0b477;padding:14px 18px;background:#fcfaf4;border-top:0;border-radius:0 7px 7px 0}.subsection[aria-labelledby^="section-5-"] h3{font-size:16px}.subsection[aria-labelledby^="section-5-"] ul{margin-bottom:4px}
+.embedding-expand{--series:#348566}.llm-expand{--series:#647fba}.llm-schema{--series:#9473a5}.fixed{--series:#b99861}.comparison-chart,.hop-chart{border:1px solid var(--line);border-radius:9px;margin:22px 0 25px;padding:23px 23px 18px;background:#fcfdfb}.figure-heading{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.figure-heading .eyebrow{font-size:8px;letter-spacing:.14em;color:#789078}.figure-heading h4{font-size:17px;letter-spacing:-.035em;line-height:1.6;font-weight:700;margin:5px 0 0}.figure-index{font:9px/2 var(--mono);color:#a3afa1;white-space:nowrap}.figure-description{font-size:10px;color:#7e8c7c;margin:8px 0 20px;line-height:1.9}.chart-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:19px;min-height:33px}.metric-switch{display:inline-flex;padding:3px;background:#edf1e8;border:1px solid #e3e9dd;border-radius:6px;gap:2px}.metric-switch button{font-size:10px;font-weight:550;border:0;border-radius:4px;background:transparent;color:#819078;padding:5px 13px;line-height:1.7}.metric-switch button[aria-pressed="true"]{color:#2d6645;background:white;box-shadow:0 1px 4px #263e1e12;font-weight:700}.metric-switch button:hover{color:#2d6645}.chart-unit{margin-left:auto;font-size:9px;color:#85917e}.chart-scale{display:flex;justify-content:space-between;margin:0 61px 8px 325px;font:8px/1.5 var(--mono);color:#9ba795}.report .ranking-chart{list-style:none;padding:0;margin:0}.report .ranking-row{padding:0;margin:0;line-height:1.6;font-size:11px}.ranking-link{display:grid;grid-template-columns:24px 279px minmax(0,1fr) 51px;gap:11px;align-items:center;padding:8px 0;border-bottom:1px solid #eef1e9;text-decoration:none;color:var(--ink);border-radius:3px}.ranking-link:hover,.ranking-link:focus-visible{background:#f0f5eb}.ranking-row:last-child .ranking-link{border-bottom:0}.rank-number{font:10px/1.4 var(--mono);color:#a2af99;text-align:center}.ranking-row:first-child .rank-number{color:#276845;font-weight:750}.rank-label>span{font-size:10px;font-weight:600;color:#5b705b}.rank-label>small{display:block;font-size:8px;color:#83917e;font-family:var(--mono);line-height:1.8;overflow-wrap:anywhere}.rank-condition{font-family:var(--font);display:block;font-size:8px;color:#99a591}.bar-track{display:block;background:repeating-linear-gradient(to right,#e2e9dc 0,#e2e9dc 1px,transparent 1px,transparent 25%);height:16px}.bar-track svg{width:100%;height:16px;display:block;overflow:visible}.metric-bar{fill:var(--series)}.report .chart-value{font:600 11px/1.4 var(--mono);color:#426442;text-align:right;white-space:nowrap}.chart-legend{display:flex;flex-wrap:wrap;gap:7px 16px;padding-top:19px;font-size:9px;color:#7a8975}.chart-legend>span{display:flex;align-items:center;gap:5px}.chart-legend i{width:7px;height:7px;border-radius:2px;background:var(--series)}.chart-detail{font-size:10px;color:#6b7c62;background:#f2f6ed;border:1px solid #e9eee2;border-radius:5px;min-height:61px;line-height:1.8;margin:14px 0 0;padding:10px 12px}.chart-caution{font-size:10px;color:#8a8065;line-height:1.9;margin:12px 0 0}.hop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.hop-card{padding:15px;background:#fff;border:1px solid #e2e9dd;border-radius:7px;min-width:0}.hop-card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:17px}.hop-card h5{font-family:var(--mono);font-size:10px;line-height:1.8;font-weight:600;margin:0;color:#466345;word-break:break-word}.hop-card-heading>span{font-size:8px;white-space:nowrap;color:#829674;background:#f2f6ed;border-radius:3px;padding:2px 5px;flex-shrink:0}.hop-bar-row{display:grid;grid-template-columns:35px minmax(0,1fr) 51px;gap:8px;align-items:center;font-size:9px;line-height:1.7;margin:8px 0}.hop-bar-row>span{font-family:var(--mono);color:#819078}.hop-bar-row svg{display:block;width:100%;height:11px}.hop-track{fill:#f0f3ea}.hop-one .hop-fill{fill:#c0cdb5}.hop-two .hop-fill{fill:#458567}.report .hop-bar-row strong{font:500 10px/1.4 var(--mono);text-align:right;color:#668357;white-space:nowrap}.hop-change{display:flex;justify-content:space-between;align-items:center;border-top:1px solid #edf1e7;margin-top:13px;padding-top:10px;gap:6px}.hop-change>span{color:#8e9b85;font-size:9px}.report .hop-change strong{font:600 17px/1.4 var(--mono);color:#34704b}.hop-change strong small{font:10px var(--font);margin-left:3px;color:#81a06f}.hop-card p{font-size:9px;line-height:1.9;color:#92a087;margin:7px 0 0}.hop-card b{color:#6b7e5f;font-weight:500}.hop-order{font-size:8px;color:#a0ac95}
+.page-footer{margin:27px 0 37px;padding-left:240px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:10px;color:#94a08e;line-height:1.8}.page-footer a{color:#6d8560;text-decoration:none}.footer-source{display:flex;gap:14px;flex-wrap:wrap}
+@media(min-width:1500px){.report-layout{grid-template-columns:220px minmax(0,1fr);gap:36px}.report-section{padding-left:40px;padding-right:40px}.source-intro{padding-left:40px;padding-right:40px}.page-footer{padding-left:256px}}
+@media(max-width:1200px){.page,.topbar-inner{padding-left:26px;padding-right:26px}.report-layout{grid-template-columns:185px minmax(0,1fr);gap:20px}.report-section{padding:28px 25px 33px}.source-intro{padding:23px 25px}.hero{gap:26px;grid-template-columns:minmax(0,1fr) 320px}.comparison-chart,.hop-chart{padding:20px 17px 16px}.ranking-link{grid-template-columns:20px 225px minmax(0,1fr) 47px;gap:8px}.chart-scale{margin-left:261px;margin-right:55px}.rank-label>span{font-size:9px}.rank-label>small{font-size:7.5px}.stat-card{padding:17px 18px;gap:13px}.stat-text{padding-left:13px}.stat-text small{font-size:9px}.page-footer{padding-left:205px}}
+@media(max-width:980px){.report-layout{display:block}.sidebar{position:static;max-height:none;overflow:visible;margin-bottom:15px;padding:0}.toc{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}.toc>summary{display:list-item;cursor:pointer;font-size:12px;font-weight:650;color:#58704f;padding:12px 16px;list-style-position:inside}.toc[open]>summary{border-bottom:1px solid var(--line)}.toc nav{padding:10px 14px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.toc-child,.toc-caption,.sidebar-note{display:none}.hero{grid-template-columns:minmax(0,1fr) 300px;gap:24px;padding-top:38px}.hero h1{font-size:36px}.best-card{padding:22px}.best-value{font-size:57px}.report-section{padding:30px}.source-intro{padding:24px 30px}.ranking-link{grid-template-columns:24px 270px minmax(0,1fr) 52px;gap:10px}.chart-scale{margin-left:314px;margin-right:62px}.rank-label>span{font-size:10px}.rank-label>small{font-size:8px}.page-footer{padding-left:0}}
+@media(max-width:700px){.page,.topbar-inner{padding-left:17px;padding-right:17px}.topbar-inner{min-height:58px}.brand{font-size:11px;gap:8px}.brand small{display:none}.brand-mark{width:27px;height:27px;border-radius:6px}.header-actions{gap:10px}.source-link{font-size:10px}.print-button{font-size:10px;padding:5px 8px}.print-button svg{display:none}.hero{grid-template-columns:1fr;gap:23px;padding:32px 0 20px}.hero h1{font-size:35px;line-height:1.3;margin:12px 0 13px}.hero-copy>p{font-size:12px}.hero .eyebrow{font-size:8px}.hero-tags{margin-top:17px;gap:5px}.hero-tags span{font-size:8px;padding:2px 6px}.best-card{padding:21px 23px;display:grid;grid-template-columns:1fr auto;gap:0 14px}.best-card .eyebrow{grid-column:1}.best-value{grid-column:2;grid-row:1/4;align-self:center;font-size:52px;margin:0}.best-value span{font-size:23px}.best-card>p{grid-column:1;font-size:10px;margin-top:8px}.best-model{grid-column:1;font-size:8px}.best-condition{grid-column:1/-1;justify-self:start;margin-top:10px;font-size:9px}.best-detail{grid-column:1/-1;margin-top:16px;padding-top:12px;gap:15px}.best-detail span{font-size:8px}.best-detail strong{font-size:16px}.overview-stats{gap:8px;margin-bottom:15px}.stat-card{padding:12px 10px;display:block;text-align:center}.stat-number{justify-content:center;gap:3px}.stat-number strong{font-size:24px}.stat-number span{font-size:9px}.stat-text{border:0;padding:0;margin-top:8px}.stat-text b{font-size:9px}.stat-text small{font-size:8px;line-height:1.6;margin-top:4px}.overview-note{font-size:10px;margin-bottom:23px;padding:5px 10px;gap:2px 8px}.overview-note strong{font-size:10px}.overview-note a{margin-left:0;font-size:9px}.report{border-radius:9px}.report-section{padding:25px 19px 28px}.source-intro{padding:20px 19px}.source-intro li{font-size:11px}.report h2{font-size:20px;margin-bottom:20px;padding-bottom:14px;scroll-margin-top:78px}.report h3{font-size:16px;scroll-margin-top:78px}.report li{font-size:12px;margin:8px 0;line-height:1.95}.report :not(pre)>code{font-size:10.2px}.report ul,.report ol{padding-left:18px}.subsection{margin-top:26px;padding-top:23px}.table-wrap{margin:18px 0}table{font-size:11px;min-width:520px}th,td{padding:10px 11px}.results-table{min-width:850px}.comparison-chart,.hop-chart{padding:17px 12px 14px;margin-left:-6px;margin-right:-6px}.figure-heading h4{font-size:15px}.figure-heading .eyebrow{font-size:7px}.figure-index{font-size:8px}.figure-description{font-size:9px;margin-bottom:13px}.chart-toolbar{margin-bottom:13px}.metric-switch button{padding:5px 10px;font-size:9px}.chart-unit{font-size:8px}.report .ranking-chart{margin:0}.ranking-link{grid-template-columns:20px minmax(0,1fr) 47px;gap:5px 8px;position:relative;padding:10px 0}.rank-number{grid-column:1;grid-row:1/3;align-self:center;font-size:9px}.rank-label{grid-column:2/-1;grid-row:1;display:block;min-width:0}.rank-label>span{font-size:10px}.rank-label>small{font-size:8px;line-height:1.8}.rank-condition{display:inline;font-size:8px;margin-left:5px}.bar-track{grid-column:2;grid-row:2;height:11px}.bar-track svg{height:11px}.report .chart-value{grid-column:3;grid-row:2;font-size:10px}.chart-scale{margin:0 55px 0 28px;font-size:7px}.chart-legend{font-size:8px;gap:7px 13px;padding-top:14px}.chart-detail{font-size:9px;min-height:72px;padding:8px 9px}.chart-caution{font-size:9px}.hop-grid{grid-template-columns:1fr;gap:10px}.hop-card{padding:14px}.hop-card h5{font-size:11px}.hop-bar-row{font-size:10px}.report .hop-bar-row strong{font-size:11px}.hop-card p{font-size:10px}.hop-card-heading>span{font-size:9px}.subsection[aria-labelledby^="section-5-"]{padding:13px}.page-footer{font-size:9px;margin-top:20px;gap:8px}.footer-source{gap:6px 12px}.result-file code{font-size:10px!important}}
+@media(max-width:380px){.page,.topbar-inner{padding-left:12px;padding-right:12px}.hero h1{font-size:31px}.report-section,.source-intro{padding-left:15px;padding-right:15px}.best-card{padding:18px;column-gap:10px}.best-value{font-size:45px}.best-model{font-size:7px}.source-link{font-size:9px}.print-button{font-size:9px}.toc nav{grid-template-columns:1fr}.stat-text small{font-size:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+@media print{@page{size:A4;margin:14mm 11mm}html{scroll-behavior:auto;scroll-padding-top:0}body{background:#fff;color:#15271c;font-size:9pt;line-height:1.6}.topbar,.sidebar,.skip-link,.header-actions,.metric-switch,.chart-detail,.overview-note>a{display:none!important}.page{padding:0;max-width:none}.hero{padding:0 0 15px;grid-template-columns:minmax(0,1fr) 250px;gap:22px}.hero h1{font-size:28px;margin:10px 0 12px}.hero .eyebrow{font-size:7px}.hero-copy>p{font-size:9px}.hero-tags{gap:4px;margin-top:12px}.hero-tags span{font-size:7px;padding:1px 4px}.best-card{display:block;padding:16px;border-radius:7px}.best-card .eyebrow{font-size:7px}.best-value{font-size:43px;margin:8px 0}.best-value span{font-size:19px}.best-card>p{font-size:9px}.best-model{font-size:8px}.best-condition{font-size:8px;margin-top:7px}.best-detail{margin-top:10px;padding-top:9px}.best-detail span{font-size:7px}.best-detail strong{font-size:12px}.overview-stats{gap:9px;margin-bottom:12px}.stat-card{display:flex;padding:11px 13px;gap:12px}.stat-number strong{font-size:23px}.stat-number span{font-size:9px}.stat-text{padding-left:12px;border-left:1px solid var(--line);margin:0;text-align:left}.stat-text b{font-size:9px}.stat-text small{font-size:7px}.overview-note{font-size:8px;margin-bottom:17px;padding:4px 10px}.overview-note strong{font-size:8px}.report-layout{display:block}.report{border:0;overflow:visible;border-radius:0}.source-intro{padding:14px 0;background:#fff}.source-intro li{font-size:8px}.intro-label{font-size:7px;margin-bottom:8px}.report-section{padding:20px 0 15px;overflow:visible}.report h2{font-size:16px;margin-bottom:15px;padding-bottom:10px;break-after:avoid}.report h3{font-size:12px;margin-bottom:10px;break-after:avoid}.subsection{margin-top:18px;padding-top:15px;overflow:visible}.report li{font-size:8.5px;margin:4px 0;line-height:1.75}.report ul,.report ol{padding-left:16px;margin:8px 0 14px}.report :not(pre)>code{font-size:7.5px;padding:0 2px;line-height:1.6}.table-wrap{overflow:visible;margin:12px 0 17px;border-radius:0}.table-wrap:focus{outline:0}table,.results-table{min-width:0!important;width:100%;table-layout:fixed;font-size:7px;line-height:1.65}thead{display:table-header-group}thead th{font-size:6.5px;white-space:normal}.results-table th,.results-table td,th,td{padding:6px 5px;word-break:normal;overflow-wrap:anywhere;white-space:normal!important}.results-table tbody th{width:auto;font-size:7px}.ranking-table td:nth-child(2){min-width:0;width:auto}.ranking-table thead th:nth-child(2){width:31%}.results-table thead th:first-child{width:6%}.results-table code,table code{font-size:6.5px!important}.results-table .recall-cell{white-space:normal}tr{break-inside:avoid}.results-table tr:target{outline:0;background:inherit}.subsection[aria-labelledby^="section-5-"]{padding:12px;background:#fcfaf4}.subsection[aria-labelledby^="section-5-"] h3{font-size:12px}.comparison-chart,.hop-chart{margin:15px 0 18px;padding:14px;border-radius:5px;break-inside:avoid;background:#fff}.figure-heading h4{font-size:12px;margin-top:3px}.figure-heading .eyebrow{font-size:6.5px}.figure-index{font-size:7px}.figure-description{font-size:7.5px;margin:5px 0 10px}.chart-toolbar{min-height:0;margin:0 0 6px}.chart-unit{font-size:7px}.chart-scale{margin:0 50px 4px 285px;font-size:6px}.ranking-link{grid-template-columns:20px 245px minmax(0,1fr) 42px;gap:10px;padding:5px 0}.rank-number{grid-column:auto;grid-row:auto;font-size:7px}.rank-label{grid-column:auto;grid-row:auto;line-height:1.3}.rank-label>span{font-size:7.5px}.rank-label>small{font-size:6.5px;line-height:1.5}.rank-condition{display:inline;margin-left:3px;font-size:6.5px}.bar-track{grid-column:auto;grid-row:auto;height:10px}.bar-track svg{height:10px}.report .chart-value{grid-column:auto;grid-row:auto;font-size:8px}.chart-legend{padding-top:12px;font-size:7px;gap:5px 13px}.chart-caution{font-size:7.5px;margin-top:8px}.hop-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.hop-card{padding:10px;break-inside:avoid}.hop-card-heading{margin-bottom:11px}.hop-card h5{font-size:8px}.hop-card-heading>span{font-size:6px}.hop-bar-row{grid-template-columns:28px minmax(0,1fr) 42px;gap:6px;font-size:7px;margin:6px 0}.hop-bar-row svg{height:9px}.report .hop-bar-row strong{font-size:8px}.hop-change{margin-top:9px;padding-top:7px}.hop-change>span{font-size:7px}.report .hop-change strong{font-size:13px}.hop-change strong small{font-size:8px}.hop-card p{font-size:7px}.hop-order{font-size:6px}.page-footer{margin:18px 0 0;padding-top:10px;border-top:1px solid var(--line);font-size:7px}.result-file code{font-size:7.5px!important}a{text-decoration:none}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#report-body">보고서 본문으로 건너뛰기</a>
+  <header class="topbar"><div class="topbar-inner">
+    <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="7" height="6" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="14" y="14" width="7" height="6" rx="1" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 10v7H14M10 7h7.5v7" stroke="currentColor" stroke-width="1.3"/><circle cx="6.5" cy="17" r="1.5" fill="currentColor"/></svg></span>Text-to-SQL <small>RESEARCH / EVALUATION</small></a>
+    <div class="header-actions"><a class="source-link" href="report.md">원문 Markdown ↗</a><button class="print-button" id="print-report" type="button" hidden><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 7V3h10v4M5 14H3V8h14v6h-2M5 11h10v6H5z" stroke="currentColor" stroke-width="1.3"/></svg>인쇄 / PDF</button></div>
+  </div><div class="reading-progress" aria-hidden="true"></div></header>
+  <main class="page">
+    <section class="hero" aria-labelledby="report-title">
+      <div class="hero-copy"><div class="eyebrow">SCHEMA RETRIEVAL EVALUATION</div><h1 id="report-title">테이블 스키마<br>검색 방법 평가</h1><p>SQL 생성에 필요한 테이블을 얼마나 잘 찾을 수 있을까요?<br>임베딩·LLM·triplet 확장 검색의 품질과 응답시간을 비교했습니다.</p><div class="hero-tags"><span>BEAVER · dw</span><span>테이블 검색 단계 평가</span><span>성공 문항 기준 Macro Recall</span></div></div>
+      <aside class="best-card" aria-label="최고 Macro Recall 결과"><div class="eyebrow">BEST MACRO RECALL</div><div class="best-value">86.10<span>%</span></div><p>임베딩 시작점 기반 triplet 확장 검색</p><div class="best-model">text-embedding-3-small</div><span class="best-condition">시작점 상한 2개 · 최대 2-hop</span><div class="best-detail"><div><span>Macro Precision</span><strong>11.15<small>%</small></strong></div><div><span>평균 반환 테이블</span><strong>22.46<small>개</small></strong></div><div><span>평균 응답시간</span><strong>0.3043<small>초</small></strong></div></div></aside>
+    </section>
+    <div class="overview-stats" aria-label="평가 범위 요약">
+      <div class="stat-card"><div class="stat-number"><strong>97</strong><span>개</span></div><div class="stat-text"><b>검색 대상 테이블</b><small>BEAVER dw 전체 카탈로그</small></div></div>
+      <div class="stat-card"><div class="stat-number"><strong>500</strong><span>건</span></div><div class="stat-text"><b>평가 질의</b><small>dw_0–dw_499 · 원본 앞 500건</small></div></div>
+      <div class="stat-card"><div class="stat-number"><strong>18</strong><span>개</span></div><div class="stat-text"><b>비교 설정</b><small>검색 기능 10종 · 총 9,000건 요청</small></div></div>
+    </div>
+    <p class="overview-note"><strong>성공 8,997건 / 실패 3건</strong><span>품질·평균 지연은 성공 문항 기준입니다. 최종 반환량이 다른 조건을 함께 비교했습니다.</span><a href="#section-4-8">비교 조건 확인 →</a></p>
+    <div class="report-layout">
+      <aside class="sidebar"><details class="toc" open><summary>보고서 목차</summary><p class="toc-caption">CONTENTS</p><nav aria-label="보고서 목차"><a class="toc-link" href="#section-1"><span>01</span>데이터셋과 전처리</a><a class="toc-link" href="#section-2"><span>02</span>검색 방식별 동작</a><a class="toc-link" href="#section-3"><span>03</span>평가 지표와 JSON</a><a class="toc-link" href="#section-4"><span>04</span>평가 결과 비교</a><a class="toc-child" href="#section-4-1"><span>4.1</span>전체 순위</a><a class="toc-child" href="#section-4-2"><span>4.2</span>Micro 지표</a><a class="toc-child" href="#section-4-3"><span>4.3</span>응답시간과 반환량</a><a class="toc-child" href="#section-4-4"><span>4.4</span>최종 top-5 비교</a><a class="toc-child" href="#section-4-5"><span>4.5</span>임베딩 확장 비교</a><a class="toc-child" href="#section-4-6"><span>4.6</span>LLM 확장 비교</a><a class="toc-child" href="#section-4-7"><span>4.7</span>검색 계열 간 해석</a><a class="toc-child" href="#section-4-8"><span>4.8</span>비교 시 유의사항</a><a class="toc-link" href="#section-5"><span>05</span>추가 실험</a><a class="toc-link" href="#section-6"><span>06</span>평가 결과 파일</a></nav></details><p class="sidebar-note"><strong>읽기 안내</strong><br>Recall은 필요한 테이블을 찾은 비율입니다. Precision·반환량과 함께 살펴보세요.<br><br>관계 확장 검색의 시작점 수는 최종 반환 수와 다릅니다.</p></aside>
+      <article class="report" id="report-body" aria-labelledby="report-title" tabindex="-1"><div class="source-intro"><span class="intro-label" data-enhancement>REPORT OVERVIEW</span>
+<ul>
+<li>평가 목적: SQL 생성에 필요한 테이블의 검색 성능 비교</li>
+<li>평가 대상: BEAVER <code>dw</code> 도메인의 테이블 97개, 질의 500건, 검색 기능 10종·설정 조합 18개</li>
+<li>주요 비교 기준: 성공 문항 기준 Macro Recall 내림차순</li>
+<li>보조 지표: Micro Recall, Precision, F1, 완전 일치율, 처리 성공률, 응답시간, 반환 테이블 수</li>
+<li>최고 Macro Recall: 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small), 시작점 2개·2-hop 조건의 86.10%</li>
+<li>비교 조건 구분: 고정 top-5 검색과 관계 확장 후보 전체 반환 방식의 차이 반영</li>
+</ul>
+</div><section aria-labelledby="section-1" class="report-section"><h2 id="section-1" tabindex="-1">1. 데이터셋과 전처리</h2>
+<section aria-labelledby="section-1-1" class="subsection"><h3 id="section-1-1" tabindex="-1">1.1. 사용 데이터셋과 실제 평가 범위</h3>
+<ul>
+<li>질의·정답 데이터: Hugging Face <code>beaverbench/beaver-query</code>의 <code>dw</code> split</li>
+<li>테이블 메타데이터: Hugging Face <code>beaverbench/beaver-table</code>의 <code>dw</code> split</li>
+<li>BEAVER 특성: 기업 환경의 복잡한 Text-to-SQL 문제를 위한 벤치마크</li>
+<li>본 평가 범위: SQL 생성 이전의 테이블 검색 단계</li>
+</ul>
+<div aria-label="데이터셋과 평가 범위 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">구분</th>
+<th scope="col" style="text-align: right;">규모</th>
+<th scope="col">내용 및 역할</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><code>beaver-table</code>, <code>dw</code></th>
+<td style="text-align: right;">97개 테이블</td>
+<td>테이블명, 컬럼명·자료형, 행·컬럼 예시</td>
+</tr>
+<tr>
+<th scope="row"><code>beaver-query</code>, <code>dw</code> 원본</th>
+<td style="text-align: right;">5,787개 질의</td>
+<td>자연어 질문, SQL, 정답 테이블, 조인 키, 도메인 지식 등</td>
+</tr>
+<tr>
+<th scope="row">실제 평가 집합</th>
+<td style="text-align: right;">500개 질의</td>
+<td>원본 앞 500건인 <code>dw_0</code>~<code>dw_499</code></td>
+</tr>
+<tr>
+<th scope="row">검색 카탈로그</th>
+<td style="text-align: right;">97개 테이블</td>
+<td><code>table_name</code>, <code>schema</code>(DDL), <code>description</code></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>평가 부분집합: 원본 앞 500건과 전체 레코드 내용 동일; 무작위 추출 표본에 해당하지 않음</li>
+<li>질의 범주: 500건 모두 <code>domain-specific complex query</code>; 도메인 지식과 복잡한 SQL 구조를 함께 다루는 질의</li>
+<li>정답 테이블 수: 2개인 문항 195건, 3개인 문항 305건</li>
+<li>정답 테이블 출현 횟수: 문항별 합계 1,305개, 문항당 평균 2.61개</li>
+<li>결과 적용 범위: <code>dw</code> 전체 5,787건이 아닌 해당 500건의 평가 결과</li>
+</ul>
+</section><section aria-labelledby="section-1-2" class="subsection"><h3 id="section-1-2" tabindex="-1">1.2. 테이블 정보 전처리</h3>
+<ol>
+<li><code>dw</code> 도메인에 속한 테이블 메타데이터 97개 수집</li>
+<li><code>column_names</code>, <code>column_types</code>, <code>example_rows</code>, <code>example_columns</code>의 JSON 문자열을 리스트·객체 등 구조화된 값으로 복원</li>
+<li>나머지 필드와 이미 구조화된 값 보존; 전체 레코드를 UTF-8 JSON 배열로 저장</li>
+<li>컬럼명과 자료형 개수의 일치 여부 검증; 동일 테이블명은 첫 레코드만 유지</li>
+<li>테이블명·컬럼명·자료형을 조합해 <code>CREATE TABLE</code> DDL 구성; 별도의 PK·FK 제약조건 생성 없음</li>
+<li>테이블명과 DDL을 Local LLM(DeepSeek)에 입력해 주요 조회 목적·컬럼 역할 중심의 한국어 테이블 설명(table description) 생성</li>
+<li>
+<p>테이블명·DDL·설명으로 검색 카탈로그 구성; 전처리 산출물과 실제 검색 카탈로그의 내용 일치 확인</p>
+</li>
+<li>
+<p>테이블 설명: Local LLM(DeepSeek)으로 생성한 전처리 정보; BEAVER 원본 주석과 구분</p>
+</li>
+<li>전처리·검색 실행 구분: 테이블 설명은 Local LLM(DeepSeek)으로 사전 생성; 본 보고서의 DeepSeek 검색·관계 생성은 OpenRouter 경로 기준</li>
+</ol>
+</section><section aria-labelledby="section-1-3" class="subsection"><h3 id="section-1-3" tabindex="-1">1.3. 질의 정보 전처리</h3>
+<ol>
+<li><code>dw</code> 도메인의 질의 5,787건 수집</li>
+<li><code>tables</code>, <code>join_keys</code>, <code>column_mapping</code>, <code>domain_knowledge</code>, <code>sub_questions</code>, <code>sub_sqls</code>의 JSON 문자열을 리스트·객체 등 구조화된 값으로 복원</li>
+<li><code>id</code>, <code>category</code>, <code>detailed_category</code>, <code>contains_domain_knowledge</code>, <code>db</code>, <code>question</code>, <code>sql</code> 등 나머지 필드 보존; UTF-8 JSON 배열로 저장</li>
+<li>
+<p>원본 앞 500건으로 평가 입력 구성; <code>id</code>는 문항 식별, <code>question</code>은 검색 질의, <code>tables</code>는 정답 테이블로 사용</p>
+</li>
+<li>
+<p>정답 기준: SQL에서 다시 추출한 테이블이 아닌 데이터셋의 <code>tables</code> 주석</p>
+</li>
+<li>검색 입력 제외 정보: 정답 SQL, 조인 키, 컬럼 매핑, 도메인 지식 주석, 하위 질문·SQL</li>
+<li>평가 히스토리: 모든 문항에서 빈 배열 사용</li>
+</ol>
+</section></section><section aria-labelledby="section-2" class="report-section"><h2 id="section-2" tabindex="-1">2. 검색 방식별 동작</h2>
+<section aria-labelledby="section-2-1" class="subsection"><h3 id="section-2-1" tabindex="-1">2.1. 공통 입력과 모델</h3>
+<ul>
+<li>공통 입력: 현재 질의 <code>query</code>, 오래된 순서의 <code>user</code>·<code>assistant</code> 메시지 목록 <code>history</code></li>
+<li>실제 사용 범위: 최근 메시지 최대 3개인 <code>history[-3:]</code>과 현재 질의; 메시지 하나를 1 turn으로 취급</li>
+<li>임베딩 입력: 최근 메시지의 <code>role: content</code>와 현재 질의를 결합; 히스토리가 없으면 질의 원문만 사용</li>
+<li>LLM 입력: 최근 히스토리를 대화 메시지로 전달; 마지막 사용자 메시지에 현재 질의와 기능별 카탈로그·후보 정보 포함</li>
+<li>공통 반환 정보: 테이블명·원본 DDL·설명; 품질 평가는 테이블명 집합 기준</li>
+<li>평가 대상 선정: 엔드포인트 전체 목록에서 평가된 검색 계열과 현재 저장 결과를 대조; hybrid의 시작점 2개 조합도 포함</li>
+</ul>
+<div aria-label="모델과 저장 자료 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">용도</th>
+<th scope="col">모델·실행 경로</th>
+<th scope="col">현재 저장 자료</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">테이블 임베딩</th>
+<td><code>BAAI/bge-m3</code></td>
+<td>97개 테이블, 1,024차원</td>
+</tr>
+<tr>
+<th scope="row">테이블 임베딩</th>
+<td><code>text-embedding-3-small</code></td>
+<td>97개 테이블, 1,536차원</td>
+</tr>
+<tr>
+<th scope="row">Triplet 임베딩</th>
+<td><code>BAAI/bge-m3</code></td>
+<td>243개 triplet, 1,024차원</td>
+</tr>
+<tr>
+<th scope="row">Triplet 임베딩</th>
+<td><code>text-embedding-3-small</code></td>
+<td>159개 triplet, 1,536차원</td>
+</tr>
+<tr>
+<th scope="row">OpenAI 테이블 선택·관계 생성</th>
+<td><code>gpt-6-luna</code></td>
+<td>관계 159개, 참여 테이블 90개</td>
+</tr>
+<tr>
+<th scope="row">OpenRouter 테이블 선택·관계 생성</th>
+<td><code>deepseek/deepseek-v4-flash-0731</code></td>
+<td>관계 243개, 참여 테이블 97개</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>DeepSeek 온라인 검색: OpenRouter를 통한 전체 스키마 검색·LLM 시작점 기반 확장 검색의 평가 결과 사용</li>
+<li>모델·관계 규모의 근거: 현재 설정·인덱스·생성 응답 기록; 평가 JSON 자체에는 모델명·RDF 버전·해시의 완전한 이력 없음</li>
+<li>관계 의미: LLM이 스키마·설명에서 추론한 의미 관계; 검증된 외래 키·조인 조건 보장 없음</li>
+</ul>
+</section><section aria-labelledby="section-2-2" class="subsection"><h3 id="section-2-2" tabindex="-1">2.2. 임베딩 기반 스키마 검색</h3>
+<ul>
+<li>
+<p>검색 기능: 임베딩 기반 스키마 검색 (bge-m3), 임베딩 기반 스키마 검색(text-embedding-3-small)</p>
+</li>
+<li>
+<p>테이블명·설명을 각 임베딩 모델로 사전 변환; DDL은 반환용 정보로 보관</p>
+</li>
+<li>벡터를 L2 정규화한 뒤 모델별 FAISS <code>IndexFlatIP</code>에 저장</li>
+<li>질의·최근 히스토리를 같은 모델로 임베딩하고 정규화</li>
+<li>정규화 벡터의 내적으로 코사인 유사도 계산; 상위 5개 테이블 선택</li>
+<li>
+<p>인덱스에 저장된 테이블명·DDL·설명 반환</p>
+</li>
+<li>
+<p>평가 설정: 두 모델 모두 최종 스키마 5개 반환; 관계 확장·온라인 LLM 호출 없음</p>
+</li>
+<li>테이블 임베딩 시점: 사전 준비 단계; 질의마다 전체 테이블 재임베딩 없음</li>
+</ul>
+</section><section aria-labelledby="section-2-3" class="subsection"><h3 id="section-2-3" tabindex="-1">2.3. 임베딩 기반 triplet 검색</h3>
+<ul>
+<li>
+<p>검색 기능: 임베딩 기반 triplet 검색 (DeepSeek/OpenRouter, bge-m3), 임베딩 기반 triplet 검색 (gpt-6-luna, text-embedding-3-small)</p>
+</li>
+<li>
+<p>전체 테이블명·DDL·설명을 공급자별 LLM에 입력해 관계 triplet 생성</p>
+</li>
+<li><code>[주체 테이블 정보, 영문 관계 표현, 객체 테이블 정보]</code>로 구성; 원본 테이블명·설명 부착 및 동일 관계 중복 제거</li>
+<li>주체 이름·설명, 관계 표현, 객체 이름·설명을 결합해 임베딩; DDL 자체는 임베딩 입력에서 제외</li>
+<li>질의·최근 히스토리를 같은 모델로 임베딩하고 모든 triplet과의 코사인 유사도 계산</li>
+<li>주체·객체에 유사도 부여; 테이블별 참여 triplet의 최대 유사도로 점수 집계</li>
+<li>
+<p>고유 테이블 상위 5개 선택; 동점은 테이블명 순으로 정렬하고 현재 카탈로그의 DDL·설명 반환</p>
+</li>
+<li>
+<p>평가 설정: 두 모델 모두 최종 스키마 5개 반환; triplet 5개를 그대로 반환하는 방식과 구분</p>
+</li>
+<li>온라인 LLM 호출·관계 확장: 없음; LLM은 관계 사전 생성에 사용</li>
+<li>후보 범위: 인덱스에 등장하고 현재 카탈로그에 매핑되는 테이블</li>
+<li>bge-m3 계열 준비: 일반 RDF가 없으면 OpenRouter 생성 RDF를 이용하는 대체 경로 지원; 현재 저장 관계는 OpenRouter 기준</li>
+<li>비교 시 유의점: 임베딩 모델뿐 아니라 생성 관계·테이블 포함 범위도 다름</li>
+</ul>
+</section><section aria-labelledby="section-2-4" class="subsection"><h3 id="section-2-4" tabindex="-1">2.4. LLM 기반 스키마 검색</h3>
+<ul>
+<li>
+<p>검색 기능: LLM 기반 스키마 검색 (gpt-6-luna), LLM 기반 스키마 검색 (DeepSeek/OpenRouter)</p>
+</li>
+<li>
+<p>전체 테이블 97개의 이름·DDL·설명 로드</p>
+</li>
+<li>질의·최근 히스토리·전체 카탈로그를 공급자별 LLM에 입력</li>
+<li>조회·필터·집계·연결에 필요한 테이블명과 선정 근거 선택</li>
+<li>
+<p>카탈로그 포함 여부 검증·중복 제거 후 선택된 테이블의 원본 스키마 반환</p>
+</li>
+<li>
+<p>온라인 LLM 호출: 일반적인 요청에서 1회</p>
+</li>
+<li>반환 개수: 고정 제한 없음; <code>top_k</code>·<code>max_hop</code> 사용 없음</li>
+<li>사전 준비 자료: 임베딩 인덱스·RDF 불필요</li>
+</ul>
+</section><section aria-labelledby="section-2-5" class="subsection"><h3 id="section-2-5" tabindex="-1">2.5. LLM 시작점 기반 triplet 확장 검색</h3>
+<ul>
+<li>
+<p>검색 기능: LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna), LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter)</p>
+</li>
+<li>
+<p>전체 테이블명·설명과 질의·최근 히스토리를 LLM에 입력해 관련도 순으로 시작 테이블 선택</p>
+</li>
+<li>선택 결과의 이름 검증·중복 제거 후 시작점 수를 <code>top_k</code>개 이하로 제한</li>
+<li>공급자별 RDF에서 시작점을 포함해 관계를 양방향으로 <code>max_hop</code>까지 확장</li>
+<li>
+<p>방문한 테이블의 합집합 전체에 원본 DDL·설명을 매핑하고 카탈로그 순서대로 반환</p>
+</li>
+<li>
+<p>온라인 LLM 호출: 시작점 선택 1회; 최종 LLM 재선별 없음</p>
+</li>
+<li>평가 설정: 두 공급자 모두 시작점 상한 1개, 최대 1-hop·2-hop 비교</li>
+<li>반환 개수: 확장 후보 전체; 시작점이 1개여도 최종 반환은 1개나 5개로 제한되지 않음</li>
+<li>예외 처리: 시작점이 없으면 빈 결과 반환; 독립 테이블도 시작점으로 선택 가능</li>
+<li>기존 두 차례 LLM 선택 방식과의 차이: 관계 확장 후 LLM으로 후보를 다시 줄이지 않음</li>
+</ul>
+</section><section aria-labelledby="section-2-6" class="subsection"><h3 id="section-2-6" tabindex="-1">2.6. 임베딩 시작점 기반 triplet 확장 검색</h3>
+<ul>
+<li>
+<p>검색 기능: 임베딩 시작점 기반 triplet 확장 검색 (bge-m3), 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small)</p>
+</li>
+<li>
+<p>저장된 triplet 임베딩 인덱스와 현재 카탈로그·RDF 로드</p>
+</li>
+<li>질의·최근 히스토리 임베딩 후 테이블별 최고 triplet 유사도로 시작점 순위 산출</li>
+<li>순위 상위 <code>top_k</code>개의 고유 테이블을 시작점으로 선택</li>
+<li>현재 RDF의 관계를 시작점에서 양방향으로 <code>max_hop</code>까지 확장</li>
+<li>
+<p>전체 확장 후보의 원본 DDL·설명을 카탈로그 순서대로 반환</p>
+</li>
+<li>
+<p>온라인 LLM 호출·최종 재선별: 없음; 관계 사전 생성에는 공급자별 LLM 사용</p>
+</li>
+<li>평가 설정: 각 모델의 시작점 상한 1·2개와 최대 1·2-hop 조합</li>
+<li>RDF 선택: bge-m3 계열은 일반 RDF 부재 시 OpenRouter RDF로 대체; OpenAI 계열은 OpenAI RDF 사용</li>
+<li>검색 자료 구분: 시작점은 triplet 인덱스로 선택하고 관계 확장은 현재 RDF로 수행; 과거 인덱스 관계와 RDF의 자동 동기화 없음</li>
+<li>최종 반환 수: 시작점 상한과 별개; 고정 top-5 제한 없음</li>
+</ul>
+</section><section aria-labelledby="section-2-7" class="subsection"><h3 id="section-2-7" tabindex="-1">2.7. <code>top_k</code>·<code>max_hop</code>의 해석</h3>
+<div aria-label="top_k·max_hop 해석 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">검색 계열</th>
+<th scope="col"><code>top_k</code>의 의미</th>
+<th scope="col">이번 평가 설정</th>
+<th scope="col">최종 반환</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">스키마·triplet 임베딩 검색</th>
+<td>최종 반환 테이블 수의 상한</td>
+<td>5</td>
+<td>모든 문항에서 5개</td>
+</tr>
+<tr>
+<th scope="row">전체 스키마 LLM 검색</th>
+<td>사용하지 않음</td>
+<td>해당 없음</td>
+<td>LLM 선택 결과</td>
+</tr>
+<tr>
+<th scope="row">LLM 시작점 기반 확장</th>
+<td>시작 테이블 수의 상한</td>
+<td><code>top_k=1</code>, <code>max_hop=1,2</code></td>
+<td>전체 확장 후보</td>
+</tr>
+<tr>
+<th scope="row">임베딩 시작점 기반 확장</th>
+<td>시작 테이블 수의 상한</td>
+<td><code>top_k=1,2</code>, <code>max_hop=1,2</code></td>
+<td>전체 확장 후보</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>1-hop: 시작 테이블에 직접 연결된 테이블까지 포함</li>
+<li>2-hop: 직접 연결된 테이블의 이웃까지 추가; 모든 시작점의 방문 테이블 합집합 반환</li>
+<li>탐색 방향: 관계의 들어오는 방향·나가는 방향 모두 사용; 이미 방문한 테이블은 중복 확장하지 않음</li>
+<li>탐색 깊이와 반환 수: 최대 hop은 관계 이동 횟수의 상한이며 반환 테이블 수의 상한과 구분</li>
+<li>최신 평가 제외 계열: RDF 확장 후 LLM 최종 재선별 방식, SQL 생성·실행 평가</li>
+</ul>
+</section></section><section aria-labelledby="section-3" class="report-section"><h2 id="section-3" tabindex="-1">3. 평가 지표와 결과 JSON 해석</h2>
+<ul>
+<li>평가 방식: 문항별 순차 요청</li>
+<li>공통 요청 조건: <code>query=question</code>, <code>history=[]</code>, 타임아웃 300초</li>
+<li>스키마·triplet 임베딩 검색 4종: 최종 반환 스키마 <code>top_k=5</code>; 실제 모든 문항에서 5개 반환</li>
+<li>전체 스키마 LLM 검색 2종: <code>top_k</code>·<code>max_hop</code> 전달 없음; 반환 개수 가변</li>
+<li>LLM·임베딩 시작점 기반 확장 검색 4종: <code>top_k</code>는 시작점 수 상한, <code>max_hop</code>은 최대 탐색 깊이; 설정 조합별 12개 결과 비교</li>
+</ul>
+<section aria-labelledby="section-3-1" class="subsection"><h3 id="section-3-1" tabindex="-1">3.1. 결과 구조</h3>
+<div aria-label="결과 JSON 필드 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">필드</th>
+<th scope="col">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><code>format_version</code></th>
+<td>평가 JSON 형식 버전; 현재 모두 <code>1</code></td>
+</tr>
+<tr>
+<th scope="row"><code>configuration.endpoint</code>, <code>base_url</code></th>
+<td>평가한 검색 기능과 서버 주소</td>
+</tr>
+<tr>
+<th scope="row"><code>configuration.top_k</code></th>
+<td>임베딩 검색은 최종 반환 개수; 관계 확장 검색은 시작점 수 상한; 전체 스키마 LLM 검색은 <code>null</code></td>
+</tr>
+<tr>
+<th scope="row"><code>configuration.max_hop</code></th>
+<td>관계 확장 검색의 최대 hop 수; 관계 확장을 쓰지 않는 결과는 <code>null</code> 또는 필드 없음</td>
+</tr>
+<tr>
+<th scope="row"><code>configuration.timeout_seconds</code></th>
+<td>문항별 요청 타임아웃</td>
+</tr>
+<tr>
+<th scope="row"><code>configuration.dataset_path</code>, <code>dataset_sha256</code></th>
+<td>입력 위치와 파일 바이트 전체의 SHA-256; 공백·직렬화 형식 변경에도 해시 변경 가능</td>
+</tr>
+<tr>
+<th scope="row"><code>state</code></th>
+<td>실행 상태인 <code>running</code>, <code>interrupted</code>, <code>complete</code>; 검색 정답률과 별개</td>
+</tr>
+<tr>
+<th scope="row"><code>started_at</code>, <code>updated_at</code></th>
+<td>실행 시작·마지막 저장 시각; UTC 오프셋 포함</td>
+</tr>
+<tr>
+<th scope="row"><code>summary</code></th>
+<td>전체 처리 현황과 성공 응답의 집계 지표</td>
+</tr>
+<tr>
+<th scope="row"><code>results</code></th>
+<td>문항별 질문·정답·예측 테이블·지표·처리시간·오류</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>실행 시각 해석: 재개·중단·저장 비용 포함 가능; 시작·갱신 시각 차이를 순수 검색시간으로 사용하지 않음</li>
+</ul>
+</section><section aria-labelledby="section-3-2" class="subsection"><h3 id="section-3-2" tabindex="-1">3.2. 문항별 검색 품질</h3>
+<ul>
+<li>표기: 정답 테이블 집합 <code>G</code>, 검색된 테이블 집합 <code>P</code></li>
+</ul>
+<div aria-label="문항별 검색 품질 지표 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">지표</th>
+<th scope="col">계산</th>
+<th scope="col">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><code>tp</code></th>
+<td><code>len(G ∩ P)</code></td>
+<td>올바르게 찾은 정답 테이블 수</td>
+</tr>
+<tr>
+<th scope="row"><code>fp</code></th>
+<td><code>len(P - G)</code></td>
+<td>정답에 없는 추가 테이블 수</td>
+</tr>
+<tr>
+<th scope="row"><code>fn</code></th>
+<td><code>len(G - P)</code></td>
+<td>찾지 못한 정답 테이블 수</td>
+</tr>
+<tr>
+<th scope="row"><code>recall</code></th>
+<td><code>TP / (TP + FN)</code></td>
+<td>필요한 테이블 중 검색으로 확보한 비율; 본 비교의 주요 지표</td>
+</tr>
+<tr>
+<th scope="row"><code>precision</code></th>
+<td><code>TP / (TP + FP)</code></td>
+<td>반환한 테이블 중 정답의 비율</td>
+</tr>
+<tr>
+<th scope="row"><code>f1</code></th>
+<td><code>2 × TP / (2 × TP + FP + FN)</code></td>
+<td>Precision·Recall을 함께 반영한 지표</td>
+</tr>
+<tr>
+<th scope="row"><code>exact_match</code></th>
+<td><code>G == P</code></td>
+<td>누락·불필요한 추가가 없는 완전 일치 여부</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>분모가 0인 비율: <code>0.0</code> 적용</li>
+<li>집합 비교 방식: 중복 테이블·반환 순서의 점수 영향 없음; 테이블명 대소문자 자동 보정 없음</li>
+<li>평가 제외 지표: MRR·nDCG, 컬럼 검색 정확도, SQL 실행 정확도</li>
+<li>계산 예시: 정답 <code>{A, B}</code>, 예측 <code>{A, C, D}</code> → TP=1, FP=2, FN=1</li>
+<li>예시 점수: Recall 50.00%, Precision 33.33%, F1 40.00%, 완전 일치 <code>false</code></li>
+<li>완전 일치 조건: Recall 100% 확보와 불필요한 추가 테이블 부재를 모두 충족</li>
+</ul>
+</section><section aria-labelledby="section-3-3" class="subsection"><h3 id="section-3-3" tabindex="-1">3.3. 집계 지표와 처리 현황</h3>
+<div aria-label="집계 지표와 처리 현황 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col"><code>summary</code> 필드</th>
+<th scope="col">의미</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row"><code>total_count</code></th>
+<td>입력 전체 문항 수</td>
+</tr>
+<tr>
+<th scope="row"><code>evaluated_count</code></th>
+<td>성공·실패를 포함한 저장 결과 문항 수</td>
+</tr>
+<tr>
+<th scope="row"><code>success_count</code>, <code>failure_count</code></th>
+<td>정상 응답 검증 성공 수·오류 수</td>
+</tr>
+<tr>
+<th scope="row"><code>pending_count</code></th>
+<td><code>total_count - evaluated_count</code>; 아직 결과가 없는 문항 수</td>
+</tr>
+<tr>
+<th scope="row"><code>success_rate</code></th>
+<td><code>success_count / evaluated_count</code>; 검색 정답률이 아닌 응답 처리 성공률</td>
+</tr>
+<tr>
+<th scope="row"><code>macro.precision</code>, <code>macro.recall</code>, <code>macro.f1</code></th>
+<td>성공 문항별 각 지표의 단순 평균</td>
+</tr>
+<tr>
+<th scope="row"><code>micro.tp</code>, <code>micro.fp</code>, <code>micro.fn</code></th>
+<td>성공 문항 전체의 TP·FP·FN 합계</td>
+</tr>
+<tr>
+<th scope="row"><code>micro.precision</code>, <code>micro.recall</code>, <code>micro.f1</code></th>
+<td>전체 TP·FP·FN 합계로 계산한 지표</td>
+</tr>
+<tr>
+<th scope="row"><code>exact_match_rate</code></th>
+<td>성공 문항 중 완전 일치한 비율</td>
+</tr>
+<tr>
+<th scope="row"><code>mean_latency_seconds</code></th>
+<td>성공 문항의 클라이언트 측 요청·응답 처리시간 평균(초)</td>
+</tr>
+<tr>
+<th scope="row"><code>mean_api_elapsed_time</code></th>
+<td>성공 문항 중 유효한 서버 <code>elapsed_time</code>의 평균(초)</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Macro 집계: 문항별 동일 비중; <strong>Macro F1은 문항별 F1의 평균</strong></li>
+<li>Micro 집계: 테이블 출현 횟수 합산; 정답·예측 테이블이 많은 문항의 영향 증가</li>
+<li>클라이언트 시간 범위: HTTP 요청 전부터 응답 검증·지표 계산 후까지; 네트워크 왕복·클라이언트 처리 포함</li>
+<li>서버 시간 범위: 서버가 보고한 API 내부 처리시간</li>
+<li>시간 집계 제외: 사전 테이블 임베딩·triplet 생성·triplet 인덱싱</li>
+<li>실패 문항 처리: 품질·평균 지연 지표에서 제외; 실패를 0점이나 타임아웃 시간으로 포함하지 않음</li>
+<li>미집계 값: 성공 문항이 없으면 품질·평균 지연 지표 <code>null</code>; 유효한 서버 시간이 없으면 서버 평균 <code>null</code></li>
+<li>결과 확인 원칙: 품질 지표와 성공률·실패 수를 함께 확인</li>
+</ul>
+</section><section aria-labelledby="section-3-4" class="subsection"><h3 id="section-3-4" tabindex="-1">3.4. 개별 결과와 실패 원인 확인</h3>
+<ul>
+<li>문항 식별: <code>index</code>, <code>id</code>, <code>question</code></li>
+<li>정답·검색 결과 비교: <code>expected_tables</code>, <code>predicted_tables</code></li>
+<li>문항별 품질: <code>metrics</code>의 TP·FP·FN, Recall·Precision·F1, 완전 일치 여부</li>
+<li>처리시간·시각: <code>latency_seconds</code>, <code>api_elapsed_time</code>, <code>completed_at</code></li>
+<li><code>status=success</code>: HTTP 성공, API 성공 상태, 반환 목록의 형식·길이 검증 통과</li>
+<li>성공 상태의 의미: 정답 테이블 선택 여부와 별개; 빈 목록도 정상 형식이면 성공 처리 가능</li>
+<li><code>status=error</code>: <code>http_status</code>, <code>error.type</code>, <code>error.message</code>로 원인 확인; 예측 테이블·지표는 <code>null</code></li>
+<li>주요 오류 유형: <code>http_error</code>(HTTP 오류), <code>api_error</code>(API 오류 상태), <code>invalid_response</code>(응답 형식 오류), 연결·타임아웃 예외</li>
+<li>재개 처리: 성공 결과 재사용, 실패·미평가 문항 재호출</li>
+<li>재개 검증: 검색 기능·서버 주소·<code>top_k</code>·<code>max_hop</code>·데이터셋 해시 등의 일치 여부 확인</li>
+</ul>
+</section></section><section aria-labelledby="section-4" class="report-section"><h2 id="section-4" tabindex="-1">4. 평가 결과 비교</h2>
+<section aria-labelledby="section-4-1" class="subsection"><h3 id="section-4-1" tabindex="-1">4.1. Macro Recall 기준 전체 순위</h3>
+<ul>
+<li>비교 대상: 현재 평가 결과 18개; 전체 목록에서 평가된 검색 기능 10종의 설정 조합</li>
+<li>순위 기준: 저장된 성공 문항 기준 Macro Recall 내림차순; 시작점·hop 설정을 별도 행으로 비교</li>
+<li>비율 표시: 백분율 소수점 둘째 자리; 시간은 초 소수점 넷째 자리; 평균 반환 수는 소수점 둘째 자리</li>
+<li>시작점·hop의 <code>—</code>: 해당 기능에서 사용하지 않는 조건; 임베딩 검색의 최종 top-5는 시작점 수에 기재하지 않음</li>
+</ul>
+<figure aria-labelledby="ranking-chart-title" class="comparison-chart" data-enhancement="">
+<figcaption class="figure-heading"><div><span class="eyebrow">18 CONFIGURATIONS</span><h4 id="ranking-chart-title">필요한 테이블을 얼마나 찾았을까?</h4></div><span class="figure-index">FIG. 01</span></figcaption>
+<p class="figure-description">18개 설정의 Macro 지표를 비교합니다. 행 순서는 원문의 Macro Recall 순위로 고정됩니다.</p>
+<div class="chart-toolbar"><div aria-label="차트의 Macro 지표 선택" class="metric-switch" hidden="" role="group">
+<button aria-pressed="true" data-metric="recall" type="button">Recall</button><button aria-pressed="false" data-metric="precision" type="button">Precision</button><button aria-pressed="false" data-metric="f1" type="button">F1</button>
+</div><span class="chart-unit" id="chart-unit">Macro Recall · %</span></div>
+<div aria-hidden="true" class="chart-scale"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></div>
+<ol class="ranking-chart"><li class="ranking-row embedding-expand" data-detail="1위 · 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small) · 시작점 2개 · 2-hop | 평균 반환 22.46개 · 응답 0.3043초 · 성공/실패 500 / 0" data-f1="19.34" data-precision="11.15" data-recall="86.10">
+<a aria-label="1위 · 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small) · 시작점 2개 · 2-hop | 평균 반환 22.46개 · 응답 0.3043초 · 성공/실패 500 / 0 | Macro Recall 86.10%" class="ranking-link" href="#ranking-row-1">
+<span class="rank-number">01</span>
+<span class="rank-label"><span>임베딩 시작점 · triplet 확장</span><small>text-embedding-3-small <span class="rank-condition">시작점 2개 · 2-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="86.10" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">86.10%</strong>
+</a>
+</li>
+<li class="ranking-row llm-expand" data-detail="2위 · LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter) · 시작점 1개 · 2-hop | 평균 반환 21.87개 · 응답 2.4967초 · 성공/실패 500 / 0" data-f1="18.70" data-precision="10.80" data-recall="84.13">
+<a aria-label="2위 · LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter) · 시작점 1개 · 2-hop | 평균 반환 21.87개 · 응답 2.4967초 · 성공/실패 500 / 0 | Macro Recall 84.13%" class="ranking-link" href="#ranking-row-2">
+<span class="rank-number">02</span>
+<span class="rank-label"><span>LLM 시작점 · triplet 확장</span><small>DeepSeek/OpenRouter <span class="rank-condition">시작점 1개 · 2-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="84.13" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">84.13%</strong>
+</a>
+</li>
+<li class="ranking-row embedding-expand" data-detail="3위 · 임베딩 시작점 기반 triplet 확장 검색 (bge-m3) · 시작점 2개 · 2-hop | 평균 반환 30.49개 · 응답 0.4518초 · 성공/실패 500 / 0" data-f1="13.56" data-precision="7.60" data-recall="79.90">
+<a aria-label="3위 · 임베딩 시작점 기반 triplet 확장 검색 (bge-m3) · 시작점 2개 · 2-hop | 평균 반환 30.49개 · 응답 0.4518초 · 성공/실패 500 / 0 | Macro Recall 79.90%" class="ranking-link" href="#ranking-row-3">
+<span class="rank-number">03</span>
+<span class="rank-label"><span>임베딩 시작점 · triplet 확장</span><small>bge-m3 <span class="rank-condition">시작점 2개 · 2-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="79.90" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">79.90%</strong>
+</a>
+</li>
+<li class="ranking-row embedding-expand" data-detail="4위 · 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small) · 시작점 1개 · 2-hop | 평균 반환 19.75개 · 응답 0.3075초 · 성공/실패 500 / 0" data-f1="19.93" data-precision="11.93" data-recall="77.30">
+<a aria-label="4위 · 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small) · 시작점 1개 · 2-hop | 평균 반환 19.75개 · 응답 0.3075초 · 성공/실패 500 / 0 | Macro Recall 77.30%" class="ranking-link" href="#ranking-row-4">
+<span class="rank-number">04</span>
+<span class="rank-label"><span>임베딩 시작점 · triplet 확장</span><small>text-embedding-3-small <span class="rank-condition">시작점 1개 · 2-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="77.30" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">77.30%</strong>
+</a>
+</li>
+<li class="ranking-row embedding-expand" data-detail="5위 · 임베딩 시작점 기반 triplet 확장 검색 (bge-m3) · 시작점 1개 · 2-hop | 평균 반환 27.24개 · 응답 0.4365초 · 성공/실패 500 / 0" data-f1="16.05" data-precision="9.43" data-recall="77.20">
+<a aria-label="5위 · 임베딩 시작점 기반 triplet 확장 검색 (bge-m3) · 시작점 1개 · 2-hop | 평균 반환 27.24개 · 응답 0.4365초 · 성공/실패 500 / 0 | Macro Recall 77.20%" class="ranking-link" href="#ranking-row-5">
+<span class="rank-number">05</span>
+<span class="rank-label"><span>임베딩 시작점 · triplet 확장</span><small>bge-m3 <span class="rank-condition">시작점 1개 · 2-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="77.20" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">77.20%</strong>
+</a>
+</li>
+<li class="ranking-row llm-expand" data-detail="6위 · LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna) · 시작점 1개 · 2-hop | 평균 반환 19.05개 · 응답 3.0347초 · 성공/실패 498 / 2" data-f1="21.69" data-precision="13.42" data-recall="77.14">
+<a aria-label="6위 · LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna) · 시작점 1개 · 2-hop | 평균 반환 19.05개 · 응답 3.0347초 · 성공/실패 498 / 2 | Macro Recall 77.14%" class="ranking-link" href="#ranking-row-6">
+<span class="rank-number">06</span>
+<span class="rank-label"><span>LLM 시작점 · triplet 확장</span><small>gpt-6-luna <span class="rank-condition">시작점 1개 · 2-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="77.14" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">77.14%</strong>
+</a>
+</li>
+<li class="ranking-row embedding-expand" data-detail="7위 · 임베딩 시작점 기반 triplet 확장 검색 (bge-m3) · 시작점 2개 · 1-hop | 평균 반환 12.26개 · 응답 0.4585초 · 성공/실패 500 / 0" data-f1="22.72" data-precision="14.43" data-recall="63.90">
+<a aria-label="7위 · 임베딩 시작점 기반 triplet 확장 검색 (bge-m3) · 시작점 2개 · 1-hop | 평균 반환 12.26개 · 응답 0.4585초 · 성공/실패 500 / 0 | Macro Recall 63.90%" class="ranking-link" href="#ranking-row-7">
+<span class="rank-number">07</span>
+<span class="rank-label"><span>임베딩 시작점 · triplet 확장</span><small>bge-m3 <span class="rank-condition">시작점 2개 · 1-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="63.90" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">63.90%</strong>
+</a>
+</li>
+<li class="ranking-row llm-schema" data-detail="8위 · LLM 기반 스키마 검색 (DeepSeek/OpenRouter) · 반환 개수 가변 | 평균 반환 3.78개 · 응답 3.7826초 · 성공/실패 500 / 0" data-f1="54.11" data-precision="51.69" data-recall="63.50">
+<a aria-label="8위 · LLM 기반 스키마 검색 (DeepSeek/OpenRouter) · 반환 개수 가변 | 평균 반환 3.78개 · 응답 3.7826초 · 성공/실패 500 / 0 | Macro Recall 63.50%" class="ranking-link" href="#ranking-row-8">
+<span class="rank-number">08</span>
+<span class="rank-label"><span>전체 스키마 · LLM 선택</span><small>DeepSeek/OpenRouter <span class="rank-condition">반환 개수 가변</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="63.50" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">63.50%</strong>
+</a>
+</li>
+<li class="ranking-row llm-schema" data-detail="9위 · LLM 기반 스키마 검색 (gpt-6-luna) · 반환 개수 가변 | 평균 반환 2.43개 · 응답 2.5537초 · 성공/실패 500 / 0" data-f1="60.10" data-precision="63.98" data-recall="59.53">
+<a aria-label="9위 · LLM 기반 스키마 검색 (gpt-6-luna) · 반환 개수 가변 | 평균 반환 2.43개 · 응답 2.5537초 · 성공/실패 500 / 0 | Macro Recall 59.53%" class="ranking-link" href="#ranking-row-9">
+<span class="rank-number">09</span>
+<span class="rank-label"><span>전체 스키마 · LLM 선택</span><small>gpt-6-luna <span class="rank-condition">반환 개수 가변</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="59.53" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">59.53%</strong>
+</a>
+</li>
+<li class="ranking-row embedding-expand" data-detail="10위 · 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small) · 시작점 2개 · 1-hop | 평균 반환 9.83개 · 응답 0.3060초 · 성공/실패 500 / 0" data-f1="24.98" data-precision="16.26" data-recall="58.87">
+<a aria-label="10위 · 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small) · 시작점 2개 · 1-hop | 평균 반환 9.83개 · 응답 0.3060초 · 성공/실패 500 / 0 | Macro Recall 58.87%" class="ranking-link" href="#ranking-row-10">
+<span class="rank-number">10</span>
+<span class="rank-label"><span>임베딩 시작점 · triplet 확장</span><small>text-embedding-3-small <span class="rank-condition">시작점 2개 · 1-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="58.87" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">58.87%</strong>
+</a>
+</li>
+<li class="ranking-row fixed" data-detail="11위 · 임베딩 기반 triplet 검색 (gpt-6-luna, text-embedding-3-small) · 최종 top-5 | 평균 반환 5.00개 · 응답 0.2965초 · 성공/실패 500 / 0" data-f1="38.94" data-precision="29.64" data-recall="58.20">
+<a aria-label="11위 · 임베딩 기반 triplet 검색 (gpt-6-luna, text-embedding-3-small) · 최종 top-5 | 평균 반환 5.00개 · 응답 0.2965초 · 성공/실패 500 / 0 | Macro Recall 58.20%" class="ranking-link" href="#ranking-row-11">
+<span class="rank-number">11</span>
+<span class="rank-label"><span>triplet 임베딩 · 최종 top-5</span><small>gpt-6-luna, text-embedding-3-small <span class="rank-condition">최종 top-5</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="58.20" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">58.20%</strong>
+</a>
+</li>
+<li class="ranking-row embedding-expand" data-detail="12위 · 임베딩 시작점 기반 triplet 확장 검색 (bge-m3) · 시작점 1개 · 1-hop | 평균 반환 10.19개 · 응답 0.4429초 · 성공/실패 500 / 0" data-f1="24.04" data-precision="17.19" data-recall="56.20">
+<a aria-label="12위 · 임베딩 시작점 기반 triplet 확장 검색 (bge-m3) · 시작점 1개 · 1-hop | 평균 반환 10.19개 · 응답 0.4429초 · 성공/실패 500 / 0 | Macro Recall 56.20%" class="ranking-link" href="#ranking-row-12">
+<span class="rank-number">12</span>
+<span class="rank-label"><span>임베딩 시작점 · triplet 확장</span><small>bge-m3 <span class="rank-condition">시작점 1개 · 1-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="56.20" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">56.20%</strong>
+</a>
+</li>
+<li class="ranking-row llm-expand" data-detail="13위 · LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter) · 시작점 1개 · 1-hop | 평균 반환 6.21개 · 응답 2.6694초 · 성공/실패 500 / 0" data-f1="31.23" data-precision="23.66" data-recall="52.83">
+<a aria-label="13위 · LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter) · 시작점 1개 · 1-hop | 평균 반환 6.21개 · 응답 2.6694초 · 성공/실패 500 / 0 | Macro Recall 52.83%" class="ranking-link" href="#ranking-row-13">
+<span class="rank-number">13</span>
+<span class="rank-label"><span>LLM 시작점 · triplet 확장</span><small>DeepSeek/OpenRouter <span class="rank-condition">시작점 1개 · 1-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="52.83" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">52.83%</strong>
+</a>
+</li>
+<li class="ranking-row fixed" data-detail="14위 · 임베딩 기반 스키마 검색(text-embedding-3-small) · 최종 top-5 | 평균 반환 5.00개 · 응답 0.2970초 · 성공/실패 500 / 0" data-f1="34.81" data-precision="26.44" data-recall="52.30">
+<a aria-label="14위 · 임베딩 기반 스키마 검색(text-embedding-3-small) · 최종 top-5 | 평균 반환 5.00개 · 응답 0.2970초 · 성공/실패 500 / 0 | Macro Recall 52.30%" class="ranking-link" href="#ranking-row-14">
+<span class="rank-number">14</span>
+<span class="rank-label"><span>스키마 임베딩 · 최종 top-5</span><small>text-embedding-3-small <span class="rank-condition">최종 top-5</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="52.30" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">52.30%</strong>
+</a>
+</li>
+<li class="ranking-row fixed" data-detail="15위 · 임베딩 기반 스키마 검색 (bge-m3) · 최종 top-5 | 평균 반환 5.00개 · 응답 0.4535초 · 성공/실패 500 / 0" data-f1="34.36" data-precision="26.16" data-recall="51.37">
+<a aria-label="15위 · 임베딩 기반 스키마 검색 (bge-m3) · 최종 top-5 | 평균 반환 5.00개 · 응답 0.4535초 · 성공/실패 500 / 0 | Macro Recall 51.37%" class="ranking-link" href="#ranking-row-15">
+<span class="rank-number">15</span>
+<span class="rank-label"><span>스키마 임베딩 · 최종 top-5</span><small>bge-m3 <span class="rank-condition">최종 top-5</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="51.37" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">51.37%</strong>
+</a>
+</li>
+<li class="ranking-row embedding-expand" data-detail="16위 · 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small) · 시작점 1개 · 1-hop | 평균 반환 6.89개 · 응답 0.3326초 · 성공/실패 500 / 0" data-f1="28.06" data-precision="21.17" data-recall="50.17">
+<a aria-label="16위 · 임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small) · 시작점 1개 · 1-hop | 평균 반환 6.89개 · 응답 0.3326초 · 성공/실패 500 / 0 | Macro Recall 50.17%" class="ranking-link" href="#ranking-row-16">
+<span class="rank-number">16</span>
+<span class="rank-label"><span>임베딩 시작점 · triplet 확장</span><small>text-embedding-3-small <span class="rank-condition">시작점 1개 · 1-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="50.17" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">50.17%</strong>
+</a>
+</li>
+<li class="ranking-row llm-expand" data-detail="17위 · LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna) · 시작점 1개 · 1-hop | 평균 반환 6.13개 · 응답 3.1416초 · 성공/실패 499 / 1" data-f1="30.80" data-precision="24.17" data-recall="49.50">
+<a aria-label="17위 · LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna) · 시작점 1개 · 1-hop | 평균 반환 6.13개 · 응답 3.1416초 · 성공/실패 499 / 1 | Macro Recall 49.50%" class="ranking-link" href="#ranking-row-17">
+<span class="rank-number">17</span>
+<span class="rank-label"><span>LLM 시작점 · triplet 확장</span><small>gpt-6-luna <span class="rank-condition">시작점 1개 · 1-hop</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="49.50" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">49.50%</strong>
+</a>
+</li>
+<li class="ranking-row fixed" data-detail="18위 · 임베딩 기반 triplet 검색 (DeepSeek/OpenRouter, bge-m3) · 최종 top-5 | 평균 반환 5.00개 · 응답 0.4077초 · 성공/실패 500 / 0" data-f1="31.61" data-precision="24.08" data-recall="47.20">
+<a aria-label="18위 · 임베딩 기반 triplet 검색 (DeepSeek/OpenRouter, bge-m3) · 최종 top-5 | 평균 반환 5.00개 · 응답 0.4077초 · 성공/실패 500 / 0 | Macro Recall 47.20%" class="ranking-link" href="#ranking-row-18">
+<span class="rank-number">18</span>
+<span class="rank-label"><span>triplet 임베딩 · 최종 top-5</span><small>DeepSeek/OpenRouter, bge-m3 <span class="rank-condition">최종 top-5</span></small></span>
+<span class="bar-track"><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 16"><rect class="metric-bar" height="16" rx="1" width="47.20" x="0" y="0"></rect></svg></span>
+<strong class="chart-value">47.20%</strong>
+</a>
+</li></ol>
+<div aria-label="검색 방식 범례" class="chart-legend"><span class="embedding-expand"><i></i>임베딩 시작점 확장</span><span class="llm-expand"><i></i>LLM 시작점 확장</span><span class="llm-schema"><i></i>전체 스키마 LLM</span><span class="fixed"><i></i>고정 top-5</span></div>
+<p class="chart-detail" id="chart-detail">항목을 선택하면 아래 원문 표의 해당 행으로 이동합니다.</p>
+<p class="chart-caution">확장 검색은 후보 전체를 반환합니다. 높은 Recall과 함께 Precision·평균 반환량을 확인하세요.</p>
+<span aria-live="polite" class="sr-only" id="metric-status" role="status"></span>
+</figure><div aria-label="Macro Recall 기준 전체 순위 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table class="results-table ranking-table" id="ranking-table">
+<thead>
+<tr>
+<th scope="col">순위</th>
+<th scope="col">검색 방식</th>
+<th scope="col">시작점 상한</th>
+<th scope="col">최대 hop</th>
+<th scope="col">Macro Recall</th>
+<th scope="col">Macro Precision</th>
+<th scope="col">Macro F1</th>
+<th scope="col">완전 일치율</th>
+</tr>
+</thead>
+<tbody>
+<tr class="leading-row" id="ranking-row-1" tabindex="-1">
+<th scope="row">1</th>
+<td>임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small)</td>
+<td>2</td>
+<td>2</td>
+<td class="recall-cell">86.10%</td>
+<td>11.15%</td>
+<td>19.34%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-2" tabindex="-1">
+<th scope="row">2</th>
+<td>LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter)</td>
+<td>1</td>
+<td>2</td>
+<td class="recall-cell">84.13%</td>
+<td>10.80%</td>
+<td>18.70%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-3" tabindex="-1">
+<th scope="row">3</th>
+<td>임베딩 시작점 기반 triplet 확장 검색 (bge-m3)</td>
+<td>2</td>
+<td>2</td>
+<td class="recall-cell">79.90%</td>
+<td>7.60%</td>
+<td>13.56%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-4" tabindex="-1">
+<th scope="row">4</th>
+<td>임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small)</td>
+<td>1</td>
+<td>2</td>
+<td class="recall-cell">77.30%</td>
+<td>11.93%</td>
+<td>19.93%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-5" tabindex="-1">
+<th scope="row">5</th>
+<td>임베딩 시작점 기반 triplet 확장 검색 (bge-m3)</td>
+<td>1</td>
+<td>2</td>
+<td class="recall-cell">77.20%</td>
+<td>9.43%</td>
+<td>16.05%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-6" tabindex="-1">
+<th scope="row">6</th>
+<td>LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna)</td>
+<td>1</td>
+<td>2</td>
+<td class="recall-cell">77.14%</td>
+<td>13.42%</td>
+<td>21.69%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-7" tabindex="-1">
+<th scope="row">7</th>
+<td>임베딩 시작점 기반 triplet 확장 검색 (bge-m3)</td>
+<td>2</td>
+<td>1</td>
+<td class="recall-cell">63.90%</td>
+<td>14.43%</td>
+<td>22.72%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-8" tabindex="-1">
+<th scope="row">8</th>
+<td>LLM 기반 스키마 검색 (DeepSeek/OpenRouter)</td>
+<td>—</td>
+<td>—</td>
+<td class="recall-cell">63.50%</td>
+<td>51.69%</td>
+<td>54.11%</td>
+<td>12.60%</td>
+</tr>
+<tr id="ranking-row-9" tabindex="-1">
+<th scope="row">9</th>
+<td>LLM 기반 스키마 검색 (gpt-6-luna)</td>
+<td>—</td>
+<td>—</td>
+<td class="recall-cell">59.53%</td>
+<td>63.98%</td>
+<td>60.10%</td>
+<td>20.00%</td>
+</tr>
+<tr id="ranking-row-10" tabindex="-1">
+<th scope="row">10</th>
+<td>임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small)</td>
+<td>2</td>
+<td>1</td>
+<td class="recall-cell">58.87%</td>
+<td>16.26%</td>
+<td>24.98%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-11" tabindex="-1">
+<th scope="row">11</th>
+<td>임베딩 기반 triplet 검색 (gpt-6-luna, text-embedding-3-small)</td>
+<td>—</td>
+<td>—</td>
+<td class="recall-cell">58.20%</td>
+<td>29.64%</td>
+<td>38.94%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-12" tabindex="-1">
+<th scope="row">12</th>
+<td>임베딩 시작점 기반 triplet 확장 검색 (bge-m3)</td>
+<td>1</td>
+<td>1</td>
+<td class="recall-cell">56.20%</td>
+<td>17.19%</td>
+<td>24.04%</td>
+<td>1.00%</td>
+</tr>
+<tr id="ranking-row-13" tabindex="-1">
+<th scope="row">13</th>
+<td>LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter)</td>
+<td>1</td>
+<td>1</td>
+<td class="recall-cell">52.83%</td>
+<td>23.66%</td>
+<td>31.23%</td>
+<td>0.40%</td>
+</tr>
+<tr id="ranking-row-14" tabindex="-1">
+<th scope="row">14</th>
+<td>임베딩 기반 스키마 검색(text-embedding-3-small)</td>
+<td>—</td>
+<td>—</td>
+<td class="recall-cell">52.30%</td>
+<td>26.44%</td>
+<td>34.81%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-15" tabindex="-1">
+<th scope="row">15</th>
+<td>임베딩 기반 스키마 검색 (bge-m3)</td>
+<td>—</td>
+<td>—</td>
+<td class="recall-cell">51.37%</td>
+<td>26.16%</td>
+<td>34.36%</td>
+<td>0.00%</td>
+</tr>
+<tr id="ranking-row-16" tabindex="-1">
+<th scope="row">16</th>
+<td>임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small)</td>
+<td>1</td>
+<td>1</td>
+<td class="recall-cell">50.17%</td>
+<td>21.17%</td>
+<td>28.06%</td>
+<td>2.40%</td>
+</tr>
+<tr id="ranking-row-17" tabindex="-1">
+<th scope="row">17</th>
+<td>LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna)</td>
+<td>1</td>
+<td>1</td>
+<td class="recall-cell">49.50%</td>
+<td>24.17%</td>
+<td>30.80%</td>
+<td>1.40%</td>
+</tr>
+<tr id="ranking-row-18" tabindex="-1">
+<th scope="row">18</th>
+<td>임베딩 기반 triplet 검색 (DeepSeek/OpenRouter, bge-m3)</td>
+<td>—</td>
+<td>—</td>
+<td class="recall-cell">47.20%</td>
+<td>24.08%</td>
+<td>31.61%</td>
+<td>0.00%</td>
+</tr>
+</tbody>
+</table></div>
+</section><section aria-labelledby="section-4-2" class="subsection"><h3 id="section-4-2" tabindex="-1">4.2. Micro 지표와 정답 테이블 건수</h3>
+<ul>
+<li>순위 참조: 4.1절의 Macro Recall 순위와 동일한 행 순서</li>
+<li>건수 기준: 문항별 테이블 집합의 비교 건수 합계; 전체 카탈로그의 고유 테이블 수와 구분</li>
+<li>성공 500건인 결과: <code>TP + FN = 1,305</code></li>
+<li>성공 499건인 결과: <code>TP + FN = 1,302</code>; 성공 498건인 결과: <code>TP + FN = 1,299</code></li>
+<li>Micro Recall 동률: 전체 순위 4·5위는 반올림 전에도 동일한 1,006 / 1,305; Macro Recall 기준으로 순서 유지</li>
+</ul>
+<div aria-label="Micro 지표와 정답 테이블 건수 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table class="results-table numeric-table">
+<thead>
+<tr>
+<th scope="col">순위</th>
+<th scope="col">Micro Recall</th>
+<th scope="col">Micro Precision</th>
+<th scope="col">Micro F1</th>
+<th scope="col">TP</th>
+<th scope="col">FP</th>
+<th scope="col">FN</th>
+<th scope="col">성공 문항의 정답 출현 수</th>
+</tr>
+</thead>
+<tbody>
+<tr class="leading-row">
+<th scope="row">1</th>
+<td>86.05%</td>
+<td>10.00%</td>
+<td>17.92%</td>
+<td>1,123</td>
+<td>10,107</td>
+<td>182</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">2</th>
+<td>83.37%</td>
+<td>9.95%</td>
+<td>17.78%</td>
+<td>1,088</td>
+<td>9,848</td>
+<td>217</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">3</th>
+<td>79.69%</td>
+<td>6.82%</td>
+<td>12.57%</td>
+<td>1,040</td>
+<td>14,204</td>
+<td>265</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">4</th>
+<td>77.09%</td>
+<td>10.19%</td>
+<td>18.00%</td>
+<td>1,006</td>
+<td>8,868</td>
+<td>299</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">5</th>
+<td>77.09%</td>
+<td>7.39%</td>
+<td>13.48%</td>
+<td>1,006</td>
+<td>12,616</td>
+<td>299</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">6</th>
+<td>75.67%</td>
+<td>10.36%</td>
+<td>18.23%</td>
+<td>983</td>
+<td>8,503</td>
+<td>316</td>
+<td>1,299</td>
+</tr>
+<tr>
+<th scope="row">7</th>
+<td>64.06%</td>
+<td>13.64%</td>
+<td>22.49%</td>
+<td>836</td>
+<td>5,293</td>
+<td>469</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">8</th>
+<td>61.84%</td>
+<td>42.65%</td>
+<td>50.48%</td>
+<td>807</td>
+<td>1,085</td>
+<td>498</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">9</th>
+<td>57.93%</td>
+<td>62.22%</td>
+<td>60.00%</td>
+<td>756</td>
+<td>459</td>
+<td>549</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">10</th>
+<td>57.78%</td>
+<td>15.34%</td>
+<td>24.24%</td>
+<td>754</td>
+<td>4,161</td>
+<td>551</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">11</th>
+<td>56.78%</td>
+<td>29.64%</td>
+<td>38.95%</td>
+<td>741</td>
+<td>1,759</td>
+<td>564</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">12</th>
+<td>56.32%</td>
+<td>14.42%</td>
+<td>22.96%</td>
+<td>735</td>
+<td>4,362</td>
+<td>570</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">13</th>
+<td>51.19%</td>
+<td>21.51%</td>
+<td>30.29%</td>
+<td>668</td>
+<td>2,437</td>
+<td>637</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">14</th>
+<td>50.65%</td>
+<td>26.44%</td>
+<td>34.74%</td>
+<td>661</td>
+<td>1,839</td>
+<td>644</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">15</th>
+<td>50.11%</td>
+<td>26.16%</td>
+<td>34.38%</td>
+<td>654</td>
+<td>1,846</td>
+<td>651</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">16</th>
+<td>48.51%</td>
+<td>18.39%</td>
+<td>26.66%</td>
+<td>633</td>
+<td>2,810</td>
+<td>672</td>
+<td>1,305</td>
+</tr>
+<tr>
+<th scope="row">17</th>
+<td>47.31%</td>
+<td>20.14%</td>
+<td>28.25%</td>
+<td>616</td>
+<td>2,443</td>
+<td>686</td>
+<td>1,302</td>
+</tr>
+<tr>
+<th scope="row">18</th>
+<td>46.13%</td>
+<td>24.08%</td>
+<td>31.64%</td>
+<td>602</td>
+<td>1,898</td>
+<td>703</td>
+<td>1,305</td>
+</tr>
+</tbody>
+</table></div>
+</section><section aria-labelledby="section-4-3" class="subsection"><h3 id="section-4-3" tabindex="-1">4.3. 처리 현황·응답시간·반환량</h3>
+<ul>
+<li>공통 입력: 결과별 500건, 전체 9,000건; 모든 결과에서 미평가 문항 0건</li>
+<li>전체 처리 현황: 성공 8,997건·실패 3건; 실패는 서로 다른 두 문항에서 발생</li>
+<li>품질·평균 지연·평균 반환량의 분모: 각 결과의 성공 문항 수</li>
+<li>행 순서: 4.1절의 Macro Recall 순위</li>
+</ul>
+<div aria-label="처리 현황·응답시간·반환량 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table class="results-table numeric-table">
+<thead>
+<tr>
+<th scope="col">순위</th>
+<th scope="col">성공 / 실패</th>
+<th scope="col">성공률</th>
+<th scope="col">저장 상태</th>
+<th scope="col">평균 응답시간(초)</th>
+<th scope="col">평균 서버 시간(초)</th>
+<th scope="col">평균 반환 수</th>
+<th scope="col">반환 수 범위</th>
+<th scope="col">완전 일치 문항</th>
+</tr>
+</thead>
+<tbody>
+<tr class="leading-row">
+<th scope="row">1</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.3043</td>
+<td>0.2998</td>
+<td>22.46</td>
+<td>5~35개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">2</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>2.4967</td>
+<td>2.4928</td>
+<td>21.87</td>
+<td>3~44개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">3</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.4518</td>
+<td>0.4471</td>
+<td>30.49</td>
+<td>4~50개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">4</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.3075</td>
+<td>0.3028</td>
+<td>19.75</td>
+<td>4~30개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">5</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.4365</td>
+<td>0.4316</td>
+<td>27.24</td>
+<td>4~44개</td>
+<td>0 / 500</td>
+</tr>
+<tr class="has-failures">
+<th scope="row">6</th>
+<td>498 / 2</td>
+<td>99.60%</td>
+<td><code>complete</code></td>
+<td>3.0347</td>
+<td>3.0303</td>
+<td>19.05</td>
+<td>4~30개</td>
+<td>0 / 498</td>
+</tr>
+<tr>
+<th scope="row">7</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.4585</td>
+<td>0.4540</td>
+<td>12.26</td>
+<td>3~22개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">8</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>3.7826</td>
+<td>3.7790</td>
+<td>3.78</td>
+<td>1~30개</td>
+<td>63 / 500</td>
+</tr>
+<tr>
+<th scope="row">9</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>interrupted</code></td>
+<td>2.5537</td>
+<td>2.5504</td>
+<td>2.43</td>
+<td>1~6개</td>
+<td>100 / 500</td>
+</tr>
+<tr>
+<th scope="row">10</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.3060</td>
+<td>0.3016</td>
+<td>9.83</td>
+<td>4~17개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">11</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.2965</td>
+<td>0.2930</td>
+<td>5.00</td>
+<td>항상 5개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">12</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.4429</td>
+<td>0.4388</td>
+<td>10.19</td>
+<td>2~18개</td>
+<td>5 / 500</td>
+</tr>
+<tr>
+<th scope="row">13</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>2.6694</td>
+<td>2.6656</td>
+<td>6.21</td>
+<td>2~18개</td>
+<td>2 / 500</td>
+</tr>
+<tr>
+<th scope="row">14</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.2970</td>
+<td>0.2926</td>
+<td>5.00</td>
+<td>항상 5개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">15</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.4535</td>
+<td>0.4496</td>
+<td>5.00</td>
+<td>항상 5개</td>
+<td>0 / 500</td>
+</tr>
+<tr>
+<th scope="row">16</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.3326</td>
+<td>0.3285</td>
+<td>6.89</td>
+<td>2~15개</td>
+<td>12 / 500</td>
+</tr>
+<tr class="has-failures">
+<th scope="row">17</th>
+<td>499 / 1</td>
+<td>99.80%</td>
+<td><code>complete</code></td>
+<td>3.1416</td>
+<td>3.1371</td>
+<td>6.13</td>
+<td>2~15개</td>
+<td>7 / 499</td>
+</tr>
+<tr>
+<th scope="row">18</th>
+<td>500 / 0</td>
+<td>100.00%</td>
+<td><code>complete</code></td>
+<td>0.4077</td>
+<td>0.4039</td>
+<td>5.00</td>
+<td>항상 5개</td>
+<td>0 / 500</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>전체 스키마 OpenAI 결과: <code>interrupted</code> 상태이나 성공 500건·미평가 0건이므로 저장된 전체 결과 사용</li>
+<li>LLM 시작점 기반 OpenAI 1-hop 결과: <code>dw_155</code>에서 카탈로그 밖 테이블 선택으로 HTTP 502 발생; 성공 499건으로 집계</li>
+<li>LLM 시작점 기반 OpenAI 2-hop 결과: <code>dw_155</code>, <code>dw_324</code>에서 같은 유형의 HTTP 502 발생; 성공 498건으로 집계</li>
+<li>실패 원인 구분: 정상 응답에서 정답을 누락한 FN과 달리, 응답 검증 실패로 품질 집계에서 제외된 문항</li>
+<li>해시 대조: 기존 해시 결과 4개와 현재 해시 결과 14개로 구분되지만, 18개 결과의 <code>index</code>·<code>id</code>·질문·정답 테이블이 500건 모두 동일</li>
+<li>입력 해석: 파일 바이트의 동일성이나 해시 변경 원인은 별개; 저장된 질문·정답 기준 비교 가능</li>
+</ul>
+</section><section aria-labelledby="section-4-4" class="subsection"><h3 id="section-4-4" tabindex="-1">4.4. 최종 top-5 임베딩 검색 비교</h3>
+<ul>
+<li>동일한 최종 반환 수 조건의 Macro Recall 순서: triplet OpenAI 58.20% → 스키마 OpenAI 52.30% → 스키마 bge-m3 51.37% → triplet bge-m3 47.20%</li>
+<li>OpenAI 계열: triplet 표현 적용 시 스키마 임베딩 대비 Macro Recall 5.90%p 증가</li>
+<li>bge-m3 계열: triplet 표현 적용 시 스키마 임베딩 대비 Macro Recall 4.17%p 감소</li>
+<li>결과 해석: triplet 표현의 효과가 모든 모델에서 동일하게 나타나지 않음; 생성 관계·테이블 포함 범위의 차이도 고려</li>
+<li>완전 일치율: 4종 모두 0%; 정답이 2~3개인데 항상 5개를 반환하는 조건의 영향</li>
+</ul>
+</section><section aria-labelledby="section-4-5" class="subsection"><h3 id="section-4-5" tabindex="-1">4.5. 임베딩 시작점 기반 확장의 설정별 비교</h3>
+<ul>
+<li>비교 조건: 같은 임베딩 모델에서 시작점 상한 고정 후 1-hop·2-hop 비교</li>
+<li>평균 반환 수·Recall: 각 결과의 성공 500건 기준</li>
+</ul>
+<figure aria-labelledby="embedding-hop-chart-title" class="hop-chart" data-enhancement=""><figcaption class="figure-heading"><div><span class="eyebrow">1-HOP → 2-HOP</span><h4 id="embedding-hop-chart-title">탐색 범위를 넓혔을 때의 변화</h4></div><span class="figure-index">FIG. 02</span></figcaption><p class="figure-description">시작점 상한을 유지한 설정별 Macro Recall 비교 · 막대 범위 0–100%</p><div class="hop-grid"><div class="hop-card">
+<div class="hop-card-heading"><h5>bge-m3</h5><span>시작점 1개</span></div>
+<div class="hop-bar-row hop-one"><span>1-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="56.20"></rect></svg><strong>56.20%</strong></div>
+<div class="hop-bar-row hop-two"><span>2-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="77.20"></rect></svg><strong>77.20%</strong></div>
+<div class="hop-change"><span>Macro Recall 변화</span><strong>+21.00<small>%p</small></strong></div>
+<p>평균 반환 <b>10.19 → 27.24개</b><br/>성공 문항 <b>500 / 500건</b> <span class="hop-order">(1-hop / 2-hop)</span></p>
+</div><div class="hop-card">
+<div class="hop-card-heading"><h5>bge-m3</h5><span>시작점 2개</span></div>
+<div class="hop-bar-row hop-one"><span>1-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="63.90"></rect></svg><strong>63.90%</strong></div>
+<div class="hop-bar-row hop-two"><span>2-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="79.90"></rect></svg><strong>79.90%</strong></div>
+<div class="hop-change"><span>Macro Recall 변화</span><strong>+16.00<small>%p</small></strong></div>
+<p>평균 반환 <b>12.26 → 30.49개</b><br/>성공 문항 <b>500 / 500건</b> <span class="hop-order">(1-hop / 2-hop)</span></p>
+</div><div class="hop-card">
+<div class="hop-card-heading"><h5>text-embedding-3-small</h5><span>시작점 1개</span></div>
+<div class="hop-bar-row hop-one"><span>1-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="50.17"></rect></svg><strong>50.17%</strong></div>
+<div class="hop-bar-row hop-two"><span>2-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="77.30"></rect></svg><strong>77.30%</strong></div>
+<div class="hop-change"><span>Macro Recall 변화</span><strong>+27.13<small>%p</small></strong></div>
+<p>평균 반환 <b>6.89 → 19.75개</b><br/>성공 문항 <b>500 / 500건</b> <span class="hop-order">(1-hop / 2-hop)</span></p>
+</div><div class="hop-card">
+<div class="hop-card-heading"><h5>text-embedding-3-small</h5><span>시작점 2개</span></div>
+<div class="hop-bar-row hop-one"><span>1-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="58.87"></rect></svg><strong>58.87%</strong></div>
+<div class="hop-bar-row hop-two"><span>2-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="86.10"></rect></svg><strong>86.10%</strong></div>
+<div class="hop-change"><span>Macro Recall 변화</span><strong>+27.23<small>%p</small></strong></div>
+<p>평균 반환 <b>9.83 → 22.46개</b><br/>성공 문항 <b>500 / 500건</b> <span class="hop-order">(1-hop / 2-hop)</span></p>
+</div></div><p class="chart-caution">모든 조건은 성공 500건 기준입니다. hop 증가에 따라 반환 후보도 늘어나므로, Recall 증가와 반환량 변화를 함께 해석해야 합니다.</p></figure><div aria-label="임베딩 시작점 확장의 설정별 비교 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">임베딩 모델</th>
+<th scope="col">시작점 상한</th>
+<th scope="col">1-hop Recall</th>
+<th scope="col">2-hop Recall</th>
+<th scope="col">Recall 차이(%p)</th>
+<th scope="col">1-hop 평균 반환</th>
+<th scope="col">2-hop 평균 반환</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">bge-m3</th>
+<td>1</td>
+<td>56.20%</td>
+<td>77.20%</td>
+<td>+21.00</td>
+<td>10.19</td>
+<td>27.24</td>
+</tr>
+<tr>
+<th scope="row">bge-m3</th>
+<td>2</td>
+<td>63.90%</td>
+<td>79.90%</td>
+<td>+16.00</td>
+<td>12.26</td>
+<td>30.49</td>
+</tr>
+<tr>
+<th scope="row">text-embedding-3-small</th>
+<td>1</td>
+<td>50.17%</td>
+<td>77.30%</td>
+<td>+27.13</td>
+<td>6.89</td>
+<td>19.75</td>
+</tr>
+<tr>
+<th scope="row">text-embedding-3-small</th>
+<td>2</td>
+<td>58.87%</td>
+<td>86.10%</td>
+<td>+27.23</td>
+<td>9.83</td>
+<td>22.46</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>시작점 수 증가 효과: bge-m3의 1-hop에서 +7.70%p, 2-hop에서 +2.70%p; OpenAI 임베딩의 1-hop에서 +8.70%p, 2-hop에서 +8.80%p</li>
+<li>최상위 조건: text-embedding-3-small, 시작점 2개·2-hop의 Macro Recall 86.10%, 평균 반환 22.46개, 평균 응답시간 0.3043초</li>
+<li>반환 확대의 영향: 같은 최상위 조건의 Macro Precision 11.15%, FP 10,107개; 높은 Recall과 불필요한 반환 증가를 함께 해석</li>
+<li>bge-m3 최상위 조건: 시작점 2개·2-hop의 Macro Recall 79.90%, 평균 반환 30.49개, Macro Precision 7.60%</li>
+<li>설정 비교 결과: 두 모델 모두 시작점·hop 증가 시 관측 Recall 증가; 최종 반환 개수의 고정 제한 없이 후보를 넓힌 효과 포함</li>
+<li>모델 비교의 범위: 시작점 선택 모델과 RDF 그래프가 동시에 다르므로 임베딩 모델만의 효과로 단정 불가</li>
+</ul>
+</section><section aria-labelledby="section-4-6" class="subsection"><h3 id="section-4-6" tabindex="-1">4.6. LLM 시작점 기반 확장의 hop별 비교</h3>
+<ul>
+<li>비교 조건: 시작점 상한 1개 고정; 공급자별 1-hop·2-hop 비교</li>
+<li>아래 Recall: 성공 문항 기준의 저장 지표; OpenAI 두 조건의 성공 문항 수 차이에 유의</li>
+</ul>
+<figure aria-labelledby="llm-hop-chart-title" class="hop-chart" data-enhancement=""><figcaption class="figure-heading"><div><span class="eyebrow">1-HOP → 2-HOP</span><h4 id="llm-hop-chart-title">탐색 범위를 넓혔을 때의 변화</h4></div><span class="figure-index">FIG. 03</span></figcaption><p class="figure-description">시작점 상한을 유지한 설정별 Macro Recall 비교 · 막대 범위 0–100%</p><div class="hop-grid"><div class="hop-card">
+<div class="hop-card-heading"><h5>gpt-6-luna</h5><span>시작점 1개</span></div>
+<div class="hop-bar-row hop-one"><span>1-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="49.50"></rect></svg><strong>49.50%</strong></div>
+<div class="hop-bar-row hop-two"><span>2-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="77.14"></rect></svg><strong>77.14%</strong></div>
+<div class="hop-change"><span>Macro Recall 변화</span><strong>+27.64<small>%p</small></strong></div>
+<p>평균 반환 <b>6.13 → 19.05개</b><br/>성공 문항 <b>499 / 498건</b> <span class="hop-order">(1-hop / 2-hop)</span></p>
+</div><div class="hop-card">
+<div class="hop-card-heading"><h5>DeepSeek/OpenRouter</h5><span>시작점 1개</span></div>
+<div class="hop-bar-row hop-one"><span>1-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="52.83"></rect></svg><strong>52.83%</strong></div>
+<div class="hop-bar-row hop-two"><span>2-hop</span><svg aria-hidden="true" preserveaspectratio="none" viewbox="0 0 100 12"><rect class="hop-track" height="12" rx="1" width="100"></rect><rect class="hop-fill" height="12" rx="1" width="84.13"></rect></svg><strong>84.13%</strong></div>
+<div class="hop-change"><span>Macro Recall 변화</span><strong>+31.30<small>%p</small></strong></div>
+<p>평균 반환 <b>6.21 → 21.87개</b><br/>성공 문항 <b>500 / 500건</b> <span class="hop-order">(1-hop / 2-hop)</span></p>
+</div></div><p class="chart-caution">gpt-6-luna의 성공 문항 수는 499건과 498건으로 다릅니다. LLM 시작점 선택도 달라질 수 있어 동일 문항·동일 시작점의 통제 비교와 구분해야 합니다.</p></figure><div aria-label="LLM 시작점 확장의 hop별 비교 표. 화면보다 넓으면 가로로 스크롤할 수 있습니다." class="table-wrap" role="region" tabindex="0"><table>
+<thead>
+<tr>
+<th scope="col">시작점 선택 LLM</th>
+<th scope="col">1-hop Recall</th>
+<th scope="col">2-hop Recall</th>
+<th scope="col">Recall 차이(%p)</th>
+<th scope="col">1-hop 평균 반환</th>
+<th scope="col">2-hop 평균 반환</th>
+<th scope="col">성공 문항 1-hop / 2-hop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">gpt-6-luna</th>
+<td>49.50%</td>
+<td>77.14%</td>
+<td>+27.64</td>
+<td>6.13</td>
+<td>19.05</td>
+<td>499 / 498</td>
+</tr>
+<tr>
+<th scope="row">DeepSeek/OpenRouter</th>
+<td>52.83%</td>
+<td>84.13%</td>
+<td>+31.30</td>
+<td>6.21</td>
+<td>21.87</td>
+<td>500 / 500</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>OpenAI 변화: hop 증가와 함께 Macro Precision 24.17% → 13.42%, Macro F1 30.80% → 21.69%; 더 넓은 반환 범위와 Recall 증가를 함께 확인</li>
+<li>OpenRouter 변화: hop 증가와 함께 Macro Precision 23.66% → 10.80%, Macro F1 31.23% → 18.70%</li>
+<li>공급자 비교: DeepSeek/OpenRouter의 Macro Recall은 gpt-6-luna 대비 1-hop에서 3.33%p, 2-hop에서 6.99%p 높음; RDF와 성공 문항 집합의 차이도 반영된 비교</li>
+<li>인과 해석의 한계: 실행별 LLM 시작점 선택이 달라질 수 있고 실제 확장 결과도 항상 포함 관계가 아니므로, 전체 차이를 hop 증가만의 효과로 단정하지 않음</li>
+<li>실패 문항 영향: OpenAI 1-hop·2-hop의 집계 분모가 499·498로 달라 엄밀한 동일 문항 비교와 구분</li>
+</ul>
+</section><section aria-labelledby="section-4-7" class="subsection"><h3 id="section-4-7" tabindex="-1">4.7. 전체 스키마 LLM과 검색 계열 간 해석</h3>
+<ul>
+<li>전체 스키마 LLM: DeepSeek/OpenRouter의 Macro Recall 63.50%로 gpt-6-luna의 59.53%보다 3.97%p 높음</li>
+<li>정밀도·반환량: DeepSeek/OpenRouter는 Macro Precision 51.69%·평균 3.78개, gpt-6-luna는 63.98%·평균 2.43개; Recall 증가와 추가 반환의 관계 확인</li>
+<li>응답시간: DeepSeek/OpenRouter 3.7826초, gpt-6-luna 2.5537초; 단일 저장 결과의 평균 시간 기준</li>
+<li>전체 최고 Recall: 임베딩 시작점 기반 확장의 86.10%; 전체 스키마 LLM보다 많은 테이블을 반환하는 조건</li>
+<li>F1·완전 일치율 최고: 전체 스키마 gpt-6-luna의 Macro F1 60.10%·완전 일치율 20.00%; Recall 순위와 구분</li>
+<li>온라인 LLM 호출 차이: 전체 카탈로그·LLM 시작점 방식은 일반적으로 1회, 임베딩·hybrid 방식은 0회; 관계 사전 생성 비용은 별도</li>
+<li>%p 차이: 반올림 전 원본 지표로 계산한 후 소수점 둘째 자리 표시</li>
+</ul>
+</section><section aria-labelledby="section-4-8" class="subsection"><h3 id="section-4-8" tabindex="-1">4.8. 비교 시 유의할 조건</h3>
+<ul>
+<li><strong>최종 반환 정책</strong>: 고정 top-5, LLM 가변 선택, 확장 후보 전체 반환을 구분; 동일 반환량으로 제한한 통제 실험과 차이</li>
+<li><strong>Precision·완전 일치</strong>: 정답 2~3개에 대해 항상 5개 반환 시 완전 일치 불가능; 고정 top-5의 Macro Precision 이론적 최대값 52.20%</li>
+<li><strong>시작점 상한</strong>: <code>top_k=1,2</code>는 확장 전 테이블 수의 상한; 최종 반환 수 제한으로 해석하지 않음</li>
+<li><strong>관계·입력 차이</strong>: 공급자별 RDF 규모·연결 구조와 DDL 제공 여부가 다름; 순수 모델 성능 순위로 일반화 제한</li>
+<li><strong>실패 집계</strong>: 실패 문항은 품질·지연 지표에서 제외; 성공률과 문항 수를 함께 확인</li>
+<li><strong>평가 집합</strong>: 원본 앞 500건의 단일 범주·빈 히스토리; 전체 도메인·다른 범주·대화 문맥 성능으로 일반화 제한</li>
+<li><strong>재현 정보</strong>: 모델명·RDF/인덱스 버전·서버 자원·문항별 시작점 이력의 평가 JSON 내 보존 불완전</li>
+<li><strong>시간·비용 범위</strong>: 단일 저장 결과의 평균 요청 시간; 반복 분산·동시 처리량·사전 생성·인덱싱·토큰·금전 비용 평가 제외</li>
+<li><strong>검색 평가 범위</strong>: 정답은 <code>tables</code> 주석; 후속 SQL 생성·실행 정확도와 조인 조건의 정확성은 별도 평가 필요</li>
+</ul>
+</section></section><section aria-labelledby="section-5" class="report-section"><h2 id="section-5" tabindex="-1">5. 추가 실험</h2>
+<section aria-labelledby="section-5-1" class="subsection"><h3 id="section-5-1" tabindex="-1">5.1. 입력 테이블 스키마 수 제한</h3>
+<ul>
+<li>실험 목적: 입력 테이블 스키마 수에 따른 검색 Recall·응답시간 변화 확인</li>
+<li>비교 조건: 기존 97개 입력 대비 <strong>50개·30개·15개</strong>로 입력 테이블 스키마 제한</li>
+<li>제한 대상: 검색에 입력하는 테이블 스키마 수; 반환 테이블 수 또는 시작점 상한인 <code>top_k</code>와 별도 조건</li>
+<li>비교 지표: Macro Recall, Micro Recall, 평균 응답시간</li>
+<li>진행 상태: 추가 평가 예정·미수행; 결과 수치 미기재</li>
+</ul>
+</section><section aria-labelledby="section-5-2" class="subsection"><h3 id="section-5-2" tabindex="-1">5.2. 최대 3-hop 확장 추가 비교</h3>
+<ul>
+<li>현재 완료 범위: LLM·임베딩 시작점 기반 확장의 최대 1·2-hop 결과</li>
+<li>추가 평가 대상: 최대 2-hop 대비 <strong>최대 3-hop</strong> 확장</li>
+<li>통제 조건: 같은 검색 방식·모델·RDF·테이블 97개·질의 500건·빈 히스토리·시작점 상한 유지; 최대 hop만 변경</li>
+<li>비교 지표: Macro Recall, Micro Recall, Precision, 평균 응답시간, 평균 반환 테이블 수</li>
+<li>LLM 시작점 비교 조건: 시작점 선택 변동을 고려해 동일 시작점 재사용 여부와 함께 해석</li>
+<li>진행 상태: 3-hop 결과 미보유·추가 평가 예정; 현재 1·2-hop 결과와 구분</li>
+</ul>
+</section></section><section aria-labelledby="section-6" class="report-section"><h2 id="section-6" tabindex="-1">6. 평가 결과 파일</h2>
+<ul>
+<li>안내 범위: 최신 평가 파일 18개; 파일명 뒤의 두 숫자는 관계 확장 검색의 시작점 상한 <code>top_k</code>와 최대 <code>max_hop</code></li>
+<li>임베딩 검색 파일: 숫자 접미사 유무와 무관하게 모두 최종 top-5 평가 결과</li>
+</ul>
+<section aria-labelledby="section-6-1" class="subsection"><h3 id="section-6-1" tabindex="-1">6.1. 최종 top-5 임베딩 검색</h3>
+<ul>
+<li class="result-file">'<a href="result/embedded_triplet_based_schema.json"><code>embedded_triplet_based_schema.json</code></a>': '임베딩 기반 triplet 검색 (DeepSeek/OpenRouter, bge-m3); 최종 top-5'</li>
+<li class="result-file">'<a href="result/embedded_triplet_based_schema_open_ai.json"><code>embedded_triplet_based_schema_open_ai.json</code></a>': '임베딩 기반 triplet 검색 (gpt-6-luna, text-embedding-3-small); 최종 top-5'</li>
+<li class="result-file">'<a href="result/embedding_based_schema.json"><code>embedding_based_schema.json</code></a>': '임베딩 기반 스키마 검색 (bge-m3); 최종 top-5'</li>
+<li class="result-file">'<a href="result/embedding_based_schema_open_ai.json"><code>embedding_based_schema_open_ai.json</code></a>': '임베딩 기반 스키마 검색(text-embedding-3-small); 최종 top-5'</li>
+</ul>
+</section><section aria-labelledby="section-6-2" class="subsection"><h3 id="section-6-2" tabindex="-1">6.2. 전체 스키마 LLM 검색</h3>
+<ul>
+<li class="result-file">'<a href="result/llm_based_schema_open_ai.json"><code>llm_based_schema_open_ai.json</code></a>': 'LLM 기반 스키마 검색 (gpt-6-luna); 반환 개수 가변'</li>
+<li class="result-file">'<a href="result/llm_based_schema_open_router.json"><code>llm_based_schema_open_router.json</code></a>': 'LLM 기반 스키마 검색 (DeepSeek/OpenRouter); 반환 개수 가변'</li>
+</ul>
+</section><section aria-labelledby="section-6-3" class="subsection"><h3 id="section-6-3" tabindex="-1">6.3. LLM 시작점 기반 triplet 확장 검색</h3>
+<ul>
+<li class="result-file">'<a href="result/only_triplet_based_schema_open_ai_1_1.json"><code>only_triplet_based_schema_open_ai_1_1.json</code></a>': 'LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna); 시작점 상한 1개, 최대 1-hop'</li>
+<li class="result-file">'<a href="result/only_triplet_based_schema_open_ai_1_2.json"><code>only_triplet_based_schema_open_ai_1_2.json</code></a>': 'LLM 시작점 기반 triplet 확장 검색 (gpt-6-luna); 시작점 상한 1개, 최대 2-hop'</li>
+<li class="result-file">'<a href="result/only_triplet_based_schema_open_router_1_1.json"><code>only_triplet_based_schema_open_router_1_1.json</code></a>': 'LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter); 시작점 상한 1개, 최대 1-hop'</li>
+<li class="result-file">'<a href="result/only_triplet_based_schema_open_router_1_2.json"><code>only_triplet_based_schema_open_router_1_2.json</code></a>': 'LLM 시작점 기반 triplet 확장 검색 (DeepSeek/OpenRouter); 시작점 상한 1개, 최대 2-hop'</li>
+</ul>
+</section><section aria-labelledby="section-6-4" class="subsection"><h3 id="section-6-4" tabindex="-1">6.4. 임베딩 시작점 기반 triplet 확장 검색</h3>
+<ul>
+<li class="result-file">'<a href="result/hybrid_only_based_schema_1_1.json"><code>hybrid_only_based_schema_1_1.json</code></a>': '임베딩 시작점 기반 triplet 확장 검색 (bge-m3); 시작점 상한 1개, 최대 1-hop'</li>
+<li class="result-file">'<a href="result/hybrid_only_based_schema_1_2.json"><code>hybrid_only_based_schema_1_2.json</code></a>': '임베딩 시작점 기반 triplet 확장 검색 (bge-m3); 시작점 상한 1개, 최대 2-hop'</li>
+<li class="result-file">'<a href="result/hybrid_only_based_schema_2_1.json"><code>hybrid_only_based_schema_2_1.json</code></a>': '임베딩 시작점 기반 triplet 확장 검색 (bge-m3); 시작점 상한 2개, 최대 1-hop'</li>
+<li class="result-file">'<a href="result/hybrid_only_based_schema_2_2.json"><code>hybrid_only_based_schema_2_2.json</code></a>': '임베딩 시작점 기반 triplet 확장 검색 (bge-m3); 시작점 상한 2개, 최대 2-hop'</li>
+<li class="result-file">'<a href="result/hybrid_only_based_schema_open_ai_1_1.json"><code>hybrid_only_based_schema_open_ai_1_1.json</code></a>': '임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small); 시작점 상한 1개, 최대 1-hop'</li>
+<li class="result-file">'<a href="result/hybrid_only_based_schema_open_ai_1_2.json"><code>hybrid_only_based_schema_open_ai_1_2.json</code></a>': '임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small); 시작점 상한 1개, 최대 2-hop'</li>
+<li class="result-file">'<a href="result/hybrid_only_based_schema_open_ai_2_1.json"><code>hybrid_only_based_schema_open_ai_2_1.json</code></a>': '임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small); 시작점 상한 2개, 최대 1-hop'</li>
+<li class="result-file">'<a href="result/hybrid_only_based_schema_open_ai_2_2.json"><code>hybrid_only_based_schema_open_ai_2_2.json</code></a>': '임베딩 시작점 기반 triplet 확장 검색 (text-embedding-3-small); 시작점 상한 2개, 최대 2-hop'</li>
+</ul></section></section></article>
+    </div>
+    <footer class="page-footer"><span class="footer-source"><span>BEAVER dw · 테이블 검색 평가</span><a href="report.md">원문: report.md</a><span>원문 기준 정적 보고서</span></span><a href="#top">맨 위로 ↑</a></footer>
+  </main>
+  <script>
+(() => {
+  'use strict';
+  const chart = document.querySelector('.comparison-chart');
+  const rows = Array.from(chart.querySelectorAll('.ranking-row'));
+  const switches = chart.querySelector('.metric-switch');
+  const metricNames = {recall: 'Recall', precision: 'Precision', f1: 'F1'};
+  const detail = document.getElementById('chart-detail');
+  const detailDefault = detail.textContent;
+  let currentMetric = 'recall';
+  switches.addEventListener('click', (event) => {
+    const button = event.target.closest('button[data-metric]');
+    if (!button) return;
+    currentMetric = button.dataset.metric;
+    switches.querySelectorAll('button').forEach((item) => {
+      item.setAttribute('aria-pressed', String(item === button));
+    });
+    rows.forEach((row) => {
+      const value = row.dataset[currentMetric];
+      row.querySelector('.metric-bar').setAttribute('width', value);
+      row.querySelector('.chart-value').textContent = value + '%';
+      row.querySelector('.ranking-link').setAttribute('aria-label', row.dataset.detail + ' | Macro ' + metricNames[currentMetric] + ' ' + value + '%');
+    });
+    document.getElementById('chart-unit').textContent = 'Macro ' + metricNames[currentMetric] + ' · %';
+    document.getElementById('metric-status').textContent = 'Macro ' + metricNames[currentMetric] + ' 표시. 행 순서는 Macro Recall 순위로 유지됩니다.';
+    detail.textContent = detailDefault;
+  });
+  rows.forEach((row) => {
+    const showDetail = () => {
+      detail.textContent = row.dataset.detail + ' | Macro ' + metricNames[currentMetric] + ' ' + row.dataset[currentMetric] + '%';
+    };
+    row.addEventListener('mouseenter', showDetail);
+    row.addEventListener('focusin', showDetail);
+  });
+  chart.querySelector('.ranking-chart').addEventListener('mouseleave', () => {
+    if (!chart.querySelector('.ranking-link:focus')) detail.textContent = detailDefault;
+  });
+  switches.hidden = false;
+
+  const printButton = document.getElementById('print-report');
+  printButton.addEventListener('click', () => window.print());
+  printButton.hidden = false;
+
+  const toc = document.querySelector('.toc');
+  const mobile = window.matchMedia('(max-width: 980px)');
+  const setTocLayout = () => { toc.open = !mobile.matches; };
+  setTocLayout();
+  mobile.addEventListener('change', setTocLayout);
+  toc.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (mobile.matches) toc.open = false;
+    });
+  });
+
+  const navLinks = Array.from(toc.querySelectorAll('a'));
+  const destinations = navLinks.map((link) => document.querySelector(link.getAttribute('href')));
+  const progress = document.querySelector('.reading-progress');
+  let scheduled = false;
+  const updateReading = () => {
+    let activeIndex = -1;
+    destinations.forEach((heading, index) => {
+      if (heading.getBoundingClientRect().top <= 150) activeIndex = index;
+    });
+    navLinks.forEach((link, index) => {
+      if (index === activeIndex) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    const distance = document.documentElement.scrollHeight - window.innerHeight;
+    const fraction = distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0;
+    progress.style.transform = 'scaleX(' + fraction + ')';
+    scheduled = false;
+  };
+  const scheduleReading = () => {
+    if (!scheduled) { scheduled = true; window.requestAnimationFrame(updateReading); }
+  };
+  window.addEventListener('scroll', scheduleReading, {passive: true});
+  window.addEventListener('resize', scheduleReading);
+  updateReading();
+})();
+</script>
+</body>
+</html>

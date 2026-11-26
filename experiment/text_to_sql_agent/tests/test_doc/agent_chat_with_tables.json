@@ -1,0 +1,9 @@
+{
+  "query": "전체 학기 목록에서 학기 코드 3개만 알려줘.",
+  "provider": "openrouter",
+  "table_name": [
+    "SUBJECT_SUMMARY",
+    "CIS_COURSE_CATALOG",
+    "ACADEMIC_TERMS_ALL"
+  ]
+}
